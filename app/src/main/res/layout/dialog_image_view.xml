@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:id="@+id/layoutParent">
+    
+	<tokiokaability.auction.view.PinchImageView
+	    android:id="@+id/imvImage"
+	    android:layout_width="match_parent"
+	    android:layout_height="360dp"
+	    android:layout_centerHorizontal="true"
+	    android:contentDescription="@string/auction_title"/>
+	
+	<Button
+        android:id="@+id/btnBack"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imvImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_green_border_button"
+        android:focusable="false"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/auction_title"
+		android:textColor="@color/custom_reg_btn_color"
+		android:text="@string/close"
+		android:textSize="@dimen/hiragino_button_text_size"
+		android:textAllCaps="false"
+        />
+	
+</RelativeLayout>

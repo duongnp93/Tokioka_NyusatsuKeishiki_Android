@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:background="#838383">
+    
+    <RelativeLayout
+        android:id="@+id/imvLaneItem1"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignParentLeft="true"
+        android:background="#343434"       
+        >
+        
+        <TextView
+            android:id="@+id/lblLaneTitle"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:gravity="bottom|center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        
+        <ImageView 
+            android:id="@+id/imvLaneColor"
+            android:layout_width="48dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/auction_status_lane_red"
+            />
+        
+	</RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/imvLaneItem2"
+        android:layout_width="92dp"
+        android:layout_height="34dp"
+        android:layout_marginRight="1dp"
+        android:layout_toRightOf="@+id/imvLaneItem1"
+        android:background="#343434"         
+        >
+        
+			<ImageView
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_margin="2dp"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/auction_status_lane_itemno_bg" />
+
+	        <TextView
+	            android:id="@+id/lblProductNo"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="6dp"
+	            android:layout_marginRight="6dp"
+	            android:gravity="center|right"
+	            android:text="43434"
+	            android:textColor="#FFFF08"
+	            android:textSize="20sp"
+	            android:textStyle="bold" 
+	            android:background="@null"/>
+
+	</RelativeLayout>
+        
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="34dp"
+	    android:layout_marginRight="1dp"
+	    android:layout_toRightOf="@+id/imvLaneItem2"
+	    android:background="#343434" 
+	    >
+	            <TextView
+            android:id="@+id/lblCornerName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="left|center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />    
+	    
+	</RelativeLayout>
+
+</RelativeLayout>

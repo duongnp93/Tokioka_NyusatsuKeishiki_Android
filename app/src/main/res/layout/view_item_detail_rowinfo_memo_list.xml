@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/lblMemo"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="#E9E9E9"
+        >
+
+        <TextView
+            android:id="@+id/lblLabel"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="65dp"
+            android:background="#E9E9E9"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="@string/detai_row_25"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <Button
+            android:id="@+id/btnMemoRagister"
+            android:layout_width="@dimen/_67sdp"
+            android:layout_height="27dp"
+            android:layout_below="@+id/lblLabel"
+            android:layout_marginHorizontal="26.5dp"
+            android:background="@drawable/mn_greenbutton"
+            android:text="@string/absence_bid_btn_text"
+            android:textColor="@color/custom_black_color"
+            android:textSize="13sp">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+<!--    android:singleLine="false"-->
+<!--    android:overScrollMode="always"-->
+<!--    android:scrollbarStyle="insideInset"-->
+<!--    android:scrollbars="vertical"-->
+
+    <EditText
+        android:id="@+id/txtValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/_86sdp"
+        android:layout_margin="2dp"
+        android:background="@drawable/custom_border_textbox_gray"
+        android:scrollbars="vertical"
+        android:gravity="top"
+        android:maxLength="200"
+        android:paddingLeft="@dimen/_5sdp"
+        android:text="aaa\nbbb"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp"
+
+        >
+
+<!--        <requestFocus />-->
+    </EditText>
+
+</LinearLayout>

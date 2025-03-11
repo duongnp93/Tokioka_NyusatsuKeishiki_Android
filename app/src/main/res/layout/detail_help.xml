@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <tokiokaability.auction.view.HiraginoW6TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/top_text_header_size"
+        android:textColor="#006666"
+        android:text="@string/detail_help_title"/>
+    <tokiokaability.auction.commons.HiraginoW3TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:text="@string/detail_help_des"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:lineSpacingExtra="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/top_content_text_size"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@android:color/white"/>
+</LinearLayout>

@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+
+
+
+android {
+    compileSdk 33
+    defaultConfig {
+        applicationId "tokiokaability.auction"
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode 39
+        versionName "4.8"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            lintOptions {
+                disable 'MissingTranslation'
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+        disable "Instantiatable"
+    }
+    buildToolsVersion '31.0.0'
+}
+
+
+
+
+dependencies {
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //testCompile 'junit:junit:4.13-beta-3'
+    implementation files('libs/audio.jar')
+    implementation files('libs/gcm.jar')
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+    implementation 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.android.support:exifinterface:33.0.0'
+    implementation 'org.apache.directory.studio:org.apache.commons.codec:1.8'
+
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+

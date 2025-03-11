@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/simpleTxt"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/custom_simple_spinner_row"
+    android:textSize="@dimen/edittext_content_size"
+    android:textColor="@android:color/black"
+    android:textAllCaps="false"
+    android:text="12344556"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    />

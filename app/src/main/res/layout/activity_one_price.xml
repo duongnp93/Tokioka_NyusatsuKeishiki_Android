@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:duplicateParentState="false"
+    android:noHistory="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:background="@drawable/common_bar_bg" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_back_button_style" />
+
+        <TextView
+            android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/oneprice_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/preview_request_title" />
+
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="51.5dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_help_button_style" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/blockContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blockHeader"
+        android:background="@drawable/common_bar_bg" >
+        
+        <TextView
+            android:id="@+id/lblOnePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/one_price_cost"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/preview_request_title" />
+        
+        <TextView
+            android:id="@+id/lblOnePriceVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lblOnePrice"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/item_detail_oneprice_status"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/preview_request_title" />
+
+        <ImageButton
+            android:id="@+id/btnOk"
+            android:layout_width="95dp"
+            android:layout_height="49dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/one_price_apply_button_style" />
+
+        <!-- 
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_width="95dp"
+            android:layout_height="49dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="80dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/register_absence_bid_unregister_button_style" />
+             -->
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

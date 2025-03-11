@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
+    android:background="@android:color/white"
+
+    >
+
+
+    <TextView
+        android:id="@+id/lblLabel"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/item_detail_table_border"
+        android:background="#E9E9E9"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_5sdp"
+        android:text="@string/item_detail_absencePrice_txt"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp"
+
+        />
+
+    <TextView
+        android:id="@+id/lblValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/btnAbsencePrice"
+        android:layout_toRightOf="@+id/lblLabel"
+        android:background="@android:color/white"
+        android:ellipsize="end"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_5sdp"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp" />
+
+    <Button
+        android:id="@+id/btnAbsencePrice"
+        android:layout_width="@dimen/_67sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mn_greenbutton"
+        android:contentDescription="@string/app_name"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAllCaps="false"
+        android:textColor="@color/custom_black_color"
+        android:text="@string/absence_bid_btn_text"
+        android:textSize="13sp"
+        />
+</RelativeLayout>

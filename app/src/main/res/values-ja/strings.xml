@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">tokioka ability auction</string>
+    <string name="ok">OK</string>
+    <string name="please_waiting">接続しています…</string>
+    <string name="try_connecting_gateway">再接続しています…</string>
+    <string name="connecting_gateway">接続しています…</string>
+    <string name="closing">Closing..</string>
+    <string name="error_title_webservice">接続タイムアウト</string>
+    <!-- 
+    <string name="error_message_unknow">Cannot connect to Server.</string>
+    <string name="error_message_xml_connect_gateway">Connection failed.</string>
+    <string name="error_message_xml_parser">Cannot connect to Server.</string>
+    <string name="error_message_return_data_invalid">Cannot connect to Server.</string>
+    <string name="error_message_server_error">Cannot connect to Server.</string>
+    -->
+    <string name="error_message_unknow">ネットワークに接続できません。</string>
+    <string name="error_message_xml_connect_gateway">ネットワークに接続できません。</string>
+    <string name="error_message_xml_parser">ネットワークに接続できません。</string>
+    <string name="error_message_return_data_invalid">ネットワークに接続できません。</string>
+    <string name="error_message_server_error">ネットワークに接続できません。</string>
+    
+    <string name="error_message_system_info_not_available">ネットワークに接続できません。</string>
+    <string name="error_message_internet_error">ネットワークに接続できません。</string>
+    <string name="login_title">ログイン</string>
+    <string name="login_login">ログイン</string>
+    <string name="login_login_id">ログインID</string>
+    <string name="login_password">パスワード</string>
+    <string name="login_save_password">パスワードを保存する</string>
+    <string name="login_register">Register</string>
+    <string name="login_error_title">ログイン確認エラー</string>
+    <string name="login_error_message_username_required">ログインIDを入力してください。</string>
+    <string name="login_error_message_password_required">パスワードを入力してください。</string>
+    <string name="login_error_message_no_place">No auction site available now.</string>
+    <string name="login_error_message_blocked_account">Your Account is locked.</string>
+    <string name="login_error_message_wrong_username_password">ログインID、またはパスワードが不正です。</string>
+    <string name="login_error_message_wrong_app_version_title">お知らせ</string>
+    <string name="login_error_message_wrong_app_version">最新バージョンにアップデートしてください。アップデートしないとログインできませんのでご注意ください。</string>
+    <string name="login_agreement_title">Use Terms and Conditions</string>
+    <string name="login_agreement_content">While using this app for the first time, we will assume you have agreed to match the ID and password you used for this app with your auction site ID and password.</string>
+    <string name="login_agreement_agreed">Agree</string>
+
+    <string name="bid_fuzai_title">事前入札：</string>
+    <string name="agreement_screen_title">利用規約</string>
+    <string name="push_setting_title">お気に入り通信</string>
+    <string name="push_setting_Description">お気に入り登録した商品は、オークション10点前にプッシュ通知を送ります。</string>
+    <string name="push_setting_ok">通知を受け取る</string>
+    <string name="push_setting_deny">通知を受け取らない</string>
+
+    <string name="push_nyusatsu_setting_title">入札通知設定</string>
+    <string name="push_nyusatsu_setting_Description">入札の情報についてプッシュ通知・メールを送ります。</string>
+    <string name="push_nyusatsu_setting_ok">通知を受け取る</string>
+    <string name="push_nyusatsu_setting_deny">通知を受け取らない</string>
+    <string name="push_nyusatsu_setting_chk1">プッシュ通知</string>
+    <string name="push_nyusatsu_setting_chk2">メール</string>
+
+    <string name="language_setting_title">言語設定</string>
+    <string name="auc_setting_title">オークション設定</string>
+    <string name="language_setting_Description">アプリの表示言語を選択してください。</string>
+    <string name="language_setting_ok">日本語</string>
+    <string name="language_setting_deny">英語</string>
+    <string name="cannot_bid">現在オークションに参加できません。</string>
+    <string name="agreement_screen_agreement_content">For using the smart phone/tablet PC application "JDS"\n\nWith this service, you can participate in the auction sponsored by JDS (Japanese circulation study meeting) from the smart phone/tablet PC application "JDS."\nPlease read and agree the Confirmation Items below, and you are authorized to use this service.\n
+ \n
+        [Confirmation Items]\n
+        \n
+        1. This service is proportionate to the agreements and regulations including the JDS (Japanese circulation study meeting) participation agreement, etc.\n\n
+        2. About the usage fee and the bidding commissions, please ask JDS (Japanese circulation study meeting) operation office.\n\n
+        3. The official state(flaws, etc.) of each item is based on the voice announcement at the auction site.\n\n
+        4. Absence Bid cannot be made for an item of which the indication is corrected. Please attend a real-time auction.\n\n
+        5. A bid is not allowed for the members who are banned from attending an auction by JDS (Japanese circulation study meeting) operation office and the members whose credit limit is under the start price.\n\n
+        6. It is the members\' expense to purchase a smart phone and a tablet PC and to use the communication line.\n\n
+        7. This service is NOT available in foreign countries.\n\n
+        8. Please use this service at the spot where a radio wave condition is good.\n\n\n
+        ※Under the following conditions, the application "JDS" may cause malfunctions. The auction sites and the service operating company DO NOT take any responsibility for members\' losses caused by the malfunctions.  Please be careful. \n\n
+        * The contents display may be delayed while communication radio wave is weak and unstable, or while you move at high speed by trains, by cars, and etc.\n\n
+        * It is likely that the communication radio wave is disconnected temporarily where the communication mode is switched over from Wi-Fi to public network, from LTE to 3G, and vice versa.\n\n
+        * It is likely that this service is suspended temporarily in the following moments:\n
+        　1. when your smart phone/tablet PC receives an incoming call.\n
+        　2. when your smart phone/tablet PC receives an e-mail.\n
+        　3. when the automatic screen rock function of your smart phone/tablet PC is activated.\n
+        　4. the battery residual quantity of your smart phone/tablet PC is small.\n
+        　5. when your smart phone/tablet PC receives a notification from other applications you use while the notification setting is ON. \n\n
+        \n
+        【Service Operating Company and Inquiry】\n
+        \n
+        RASIS SOFTWARE SERVICE CO., LTD.\n
+        E-Mail : support_rca@rasis-soft.co.jp</string>
+
+    <string name="agreement_HP_content">
+        スマートフォン・タブレットアプリ「OneTouchAuction」ご利用について本サービスは、スマートフォンからOneTouchAuctionに参加できるサービスです。以下事項をご確認頂き、内容に合意の上ご利用頂けるものとします。\n\n
+
+【 ご確認事項 】\n\n
+
+1.本サービスの利用料金、また落札手数料については、GTM合同会社運営事務局へお問い合わせ下さい。\n
+2.商品の状態（瑕疵等）は、商品詳細記載事項が基準となります。\n
+3.表示に訂正がある商品は不在入札での応札はできません。リアル応札をご利用下さい。\n
+4.GTM合同会社運営事務局よりセリへの参加を停止されている会員様のご利用、セリへの応札はできません。\n
+5.スマートフォンの購入代金及び通信回線のご利用料金は会員様のご負担になります。\n
+6.海外でのご利用はサポートしておりません。\n
+7.通信状態の良い場所でご利用下さい。\n
+※以下のような場合、誤動作の原因になります。誤動作により会員が被った損害につきましては、会場・運営会社は一切の責任を負いかねます。ご注意下さい。\n
+・通信電波が届きにくい、弱い、または不安定な場所、電車、自動車等、高速移動中には、表示内容に遅延するおそれがあります。\n
+・Wi-Fi 、公衆回線・通信方式（LTE、４Gなど）が切り替わる場合、通信が一時遮断されるおそれがあります。\n
+・電話着信時、メール受信時、画面自動ロック時、バッテリー残量が少なった時、またお客様がご利用のアプリの通知設定がONで、通知が入った場合、本サービスが一時中断されるおそれがあります。\n\n
+
+【運営会社・お問い合わせ先】\n\n
+
+GTM合同会社\n
+E-Mail : g-top.management@gmail.com\n
+
+    </string>
+    <string name="top_search_title">OneTouchAuction</string>
+    <string name="place_title">Select Site</string>
+    <string name="place_today_holding">Today Open</string>
+    <string name="place_format_time">[%sth]</string>
+    <string name="place_format_time_1">[%sst]</string>
+    <string name="place_format_time_2">[%snd]</string>
+    <string name="place_format_time_3">[%srd]</string>
+    <string name="place_campaign">Campaign Name</string>
+    <string name="place_date">Open Date:</string>
+    <string name="place_start_time">Auction Start:</string>
+    <string name="place_info_title">Select Site</string>
+    <string name="place_info_message_no_place">No bid info available.</string>
+    <string name="place_info_message_work_time_title">Info</string>
+    <string name="place_info_message_work_time">オークション開始前です。</string>
+    <string name="auction_title">%s回</string>
+    <string name="auction_title_1">%sst</string>
+    <string name="auction_title_2">%snd</string>
+    <string name="auction_title_3">%srd</string>
+    <string name="auction_lane">Lane %s</string>
+    <string name="auction_product_no">th car</string>
+    <string name="auction_product_no_1">st car</string>
+    <string name="auction_product_no_2">nd car</string>
+    <string name="auction_product_no_3">rd car</string>
+    <string name="auction_start_price">スタート: %s</string>
+    <string name="auction_start_price_null">Start: </string>
+    <string name="auction_yen">＄</string>
+    <string name="auction_yen_man">%s</string>
+    <string name="auction_start_information">終了通知</string>
+    <string name="auction_not_yet_open">Today\'s auction is scheduled to be held at %s.</string>
+    <string name="auction_end_information">終了通知</string>
+    <string name="auction_all_lane_close">本日のオークションは終了しました。</string>
+    <string name="auction_current_lane_close">本日のオークションは終了しました。</string>
+    <string name="auction_year">Year\u0020</string>
+    <string name="auction_year_model">%s</string>
+    <string name="auction_connect_voice_failed">Error : audio transmission failed. But you can make a bid properly without sound of the auciton site.</string>
+    <string name="auction_start_audio_failed">Error : audio device recognition failed. But you can make a bid properly without sound of the auciton site.</string>
+    <string name="auction_connect_voice_dropped">Error : audio transmission lost. But you can make a bid properly without sound of the auciton site.</string>
+    <string name="camera_dialog_continue_capture">Picture was uploaded successfully. Take new picture for next position.</string>
+
+
+    <string name="successfull_bit_name">\u0020[Car Name]\u0020</string>
+    <string name="successfull_bit_box_no">\u0020[Box Number]\u0020</string>
+    <string name="successfull_bit_grade">\u0020[Grade]\u0020</string>
+    <string name="successfull_bit_year">\u0020[Year]\u0020</string>
+    <string name="successfull_bit_price">\u0020[Winning Bid Price]\u0020</string>
+    <string name="successfull_bit_item_no_value">%d</string>
+    <string name="successfull_bit_item_no_value_1">%d</string>
+    <string name="successfull_bit_item_no_value_2">%d</string>
+    <string name="successfull_bit_item_no_value_3">%d</string>
+    <string name="successfull_bit_price_value">%,d 円</string>
+    <string name="connection_title">Connection Error</string>
+    <string name="connection_confirm_reconnect">Connection with server is lost.</string>
+    <string name="connection_connecting">Reconnecting…</string>
+    <string name="connection_back">Back</string>
+    <string name="connection_connect">Reconnect</string>
+    <string name="product_search_screen_title">Box Number Search</string>
+    <string name="product_search_search_by_product">Search with Box Number</string>
+    <string name="product_search_message_invalidated_title">Box Number Search</string>
+    <string name="product_search_message_no_place">Select Site</string>
+    <string name="product_search_message_no_product_number">Input Search Condition</string>
+    <string name="product_search_message_no_result_title">Box Number Search</string>
+    <string name="product_search_message_no_result">データが存在しません。</string>
+    <string name="conrner_search_product_no_hint"></string>
+    <string name="freeword_search_screen_title">Type Search</string>
+    <string name="freeword_search_screen_title_7">Free Word Search (Market)</string>
+    <string name="freeword_search_search_by_freeword">Free Word Search</string>
+    <string name="freeword_search_message_invalidated_title">Free Word Search</string>
+    <string name="freeword_search_message_no_place">Select Site</string>
+    <string name="freeword_search_message_no_freeword">Input search condition.</string>
+    <string name="freeword_search_message_no_result_title">Free Word Search</string>
+    <string name="freeword_search_message_no_result">データが存在しません。</string>
+    <string name="freeword_search_freeword_hint"></string>
+    <string name="corner_search_screen_title">コーナー検索</string>
+    <string name="corner_search_search_by_freeword">Free Word Search</string>
+    <string name="corner_search_message_invalidated_title">Corner Search</string>
+    <string name="corner_search_message_no_place">Select site</string>
+    <string name="corner_search_message_no_corner_title">Corner Search</string>
+    <string name="corner_search_message_no_corner">No Corner Info.</string>
+    
+    <string name="place_selection_screen_title">Select Site</string>
+    <string name="item_detail_screen_title">商品詳細</string>
+    <string name="item_detail_screen_title_7">Bid details (Market)</string>
+    <string name="item_detail_alert">Correction</string>
+    <string name="item_detail_placeName_txt">Site Name</string>
+    <string name="item_detail_timesNo_txt">Following Order</string>
+    <string name="item_detail_holdDate_txt">Auction Date</string>
+    <string name="item_detail_itemNo_txt">Bid Number</string>
+    <string name="item_detail_boxNo_txt">Box Number</string>
+    <string name="item_detail_absencePrice_txt">Absence Price</string>
+    <string name="item_detail_myListFlag_txt">Wish List</string>
+    <string name="item_detail_notificationFlag_txt">Notification</string>
+    <string name="item_detail_previewRequest_txt">Preview Request</string>
+    <string name="item_detail_previewRequestStatus_0">Not yet</string>
+    <string name="item_detail_previewRequestStatus_1">Applying…</string>
+    <string name="item_detail_previewRequestStatus_2">Done</string>
+    <string name="item_detail_previewRequestStatus_3">Failed</string>
+    <string name="item_detail_yen_string"> 円</string>
+    <string name="item_detail_none_nobid">予約済み</string>
+    <string name="item_detail_none_string">未登録</string>
+    <string name="item_detail_unanswered_string">未回答</string>
+    <string name="item_detail_answered_string">回答有</string>
+
+    <string name="item_detail_regist_string">Registered</string>
+    <string name="item_detail_money_unit">円</string>
+    <string name="item_detail_auction_date">Auction Date</string>
+    <string name="item_detail_brand_name">Brand Name</string>
+    <string name="item_detail_kind_name">Kind Name</string>
+    <string name="item_detail_item_name">Item Name</string>
+    <string name="item_detail_state">Condition</string>
+    <string name="item_detail_list_price">List Price</string>
+    <string name="item_detail_list_material">Karat/Material</string>
+    <string name="item_detail_list_pebble">Pebble</string>
+    <string name="item_detail_weight">Weight</string>
+    <string name="item_detail_remarks">Remarks</string>
+    <string name="item_detail_outside_eval">External Packaging</string>
+    <string name="item_detail_intside_eval">Inner Packaging</string>
+    <string name="item_detail_reference_price">Reference Price</string>
+    <string name="item_detail_selling_point">Selling Point 1</string>
+    <string name="item_detail_selling_point2">Selling Point 2</string>
+    <string name="item_detail_accessory">Accessory</string>
+    <string name="item_detail_special_report">Special Note</string>
+
+
+
+    <string name="item_detail_yearModel_txt">年式</string>
+    <string name="item_detail_distance_txt">Mileage</string>
+    <string name="item_detail_colorOutside_txt">Exterior Color</string>
+    <string name="item_detail_colorInside_txt">Interior Color</string>
+    <string name="item_detail_model_txt">Serial No</string>
+    <string name="item_detail_displacement_txt">Displacement</string>
+    <string name="item_detail_shift_txt">Trans</string>
+    <string name="item_detail_inspection_txt">Car Inspection</string>
+    <string name="item_detail_fuel_txt">Fuel</string>
+    <string name="item_detail_recycle_txt">R Ticket</string>
+    <string name="item_detail_airConditioner_txt">Air Con</string>
+    <string name="item_detail_equipment_txt">Equipment</string>
+    <string name="item_detail_platformNo_txt">Chassis No</string>
+    <string name="item_detail_registerNo_txt">Registration No</string>
+    <string name="item_detail_carhistory_txt">History</string>
+    <string name="item_detail_correctiondetail_txt">Correction content</string>
+    <string name="item_detail_title_unregist_mylist">Bid details</string>
+    <string name="item_detail_message_unregist_mylist">Confirm to cancel items on Wish List.</string>
+    <string name="item_detail_title_regist_mylist">Bid details</string>
+    <string name="item_detail_message_regist_mylist">Confirm to register items on Wish List.</string>
+    <string name="item_detail_title_unregist_notify">Bid details</string>
+    <string name="item_detail_message_unregist_notify">Confirm to cancel items on Notification.</string>
+    <string name="item_detail_title_regist_notify">Bid details</string>
+    <string name="item_detail_message_regist_notify">Confirm to register items on Notification.</string>
+    <string name="items_info_message_title">Search Result List</string>
+    <string name="items_info_message_no_car">データが存在しません。</string>
+    <string name="items_info_result_list_title">リスト一覧</string>
+    <string name="count_items"> 点</string>
+    <string name="items_info_successfully_bit_title">落札一覧</string>
+    <string name="items_info_format_yen_string">%s円</string>
+    <string name="items_info_product_list_title">自社出品一覧</string>
+    <string name="items_info_bit_list_title">入札一覧</string>
+    <string name="items_info_sort_dialog_title">並び替え</string>
+    <string name="items_info_mylist_list_title">お気に入り一覧</string>
+    <string name="items_info_mylist_notification_title">Notification List</string>
+    <string name="items_info_mylist_rate_free_word_title">Search Result List (Market)</string>
+    <string name="item_detail_carName_txt">Car Name</string>
+    <string name="item_detail_gradeName_txt">Grade Type</string>
+    <string name="item_detail_result_txt">Auction Result</string>
+    <string name="item_detail_startPrice_txt">スタート価格</string>
+    <string name="item_detail_lastPrice_txt">Final Bid Price</string>
+    <string name="item_detail_startTime_txt">Auction Date</string>
+    <string name="item_detail_eval_txt">Evaluation</string>
+    <string-array name="items_info_list_sort_item_by_seven" >
+        <item >[Default]</item>
+        <item >▲Year (ASC.)</item>
+        <item >▼Year (DESC.)</item>
+        <item >▲Winning Bid Price (ASC.)</item>
+        <item >▼Winning Bid Price (DESC.)</item>
+        <item >▲Score (ASC.)</item>
+        <item >▼Score (DESC.)</item>
+        <item >▲Mileage (ASC.)</item>
+        <item >▼Mileage (DESC.)</item>
+    </string-array>
+    <string-array name="items_info_list_sort_item_by_not_seven" >
+        <item >［デフォルト]</item>
+        <item >▲セリ順 (昇順)</item>
+        <item >▼セリ順 (降順)</item>
+        <item >▲ブランド名 (昇順)</item>
+        <item >▼ブランド名 (降順)</item>
+        <item >▲モデル名１ (昇順)</item>
+        <item >▼モデル名１ (降順)</item>
+        <item >▲スタート価格 (昇順)</item>
+        <item >▼スタート価格 (降順)</item>
+        <item >▲開催日 (昇順)</item>
+        <item >▼開催日 (降順)</item>
+    </string-array>
+    <string name="contact_title">問い合わせ</string>
+    <string name="contact_inquiry_details">問い合わせ内容</string>
+    <string name="contact_note">※500文字以内で入力してください</string>
+    <string name="contact_submit">送信</string>
+    <string name="contact_back">戻る</string>
+    <string name="contact_answer_details">回答内容</string>
+    <string name="contact_update_date">更新:</string>
+    <string name="contact_ok">OK</string>
+    <string name="contact_cancel">Cancel</string>
+    <string name="contact_message_title">問い合わせ</string>
+    <string name="contact_message_confirm_back">編集中の内容が破棄されます。よろしいですか？</string>
+    <string name="contact_message_confirm_submit">問い合わせ内容を送信しますか？</string>
+    <string name="contact_message_confirm_submit_success">送信完了しました。</string>
+    <string name="contact_message_confirm_submit_failed">送信に失敗しました。</string>
+    <string name="contact_message_confirm_submit_notext_error">問い合わせ内容を入力してください。</string>
+    <string name="contact_unregistered">未登録</string>
+    <string name="contact_unanswered">未回答</string>
+    <string name="contact_answered">回答有</string>
+
+    <string name="memo_message_title">メモ</string>
+    <string name="memo_message_confirm_back">この画面から移動してもよろしいですか？保存していない変更内容は失われます。</string>
+    <string name="memo_message_confirmat">登録します。よろしいですか？</string>
+    <string name="memo_message_complet">登録が完了しました。</string>
+    <string name="memo_message_error_title">登録エラー</string>
+    <string name="memo_message_error">メモの登録に失敗しました。</string>
+    <string name="memo_ok">OK</string>
+    <string name="memo_cancel">Cancel</string>
+
+
+    <string name="settings_screen_title">設定</string>
+    <string name="settings_show_price">Preview Search\nPrice</string>
+    <string name="settings_max_row_count">Max. number of\nItems on List</string>
+    <string name="settings_10_items">10</string>
+    <string name="settings_20_items">20</string>
+    <string name="settings_50_items">50</string>
+    <string name="settings_language">言語(Language)</string>
+    <string name="settings_japanese">日本語</string>
+    <string name="settings_english">English</string>
+    <string name="settings_show_agreement">Usage rules</string>
+    <string name="settings_show_agreement_button">Show</string>
+    
+    <string name="register_preview_request_title">Preview Request Application</string>
+    <string name="register_preview_request_note_line1_part1"> This service is available at an </string>
+    <string name="register_preview_request_note_line1_part2">extra cost</string>
+    <string name="register_preview_request_note_line1_part3">.</string>
+    <string name="register_preview_request_note_line2">Please read</string>
+    <string name="register_preview_request_place_name">Site  Name : </string>
+    <string name="register_preview_request_place_name_val"></string>
+    <string name="register_preview_request_hold_date">Auction Date : </string>
+    <string name="register_preview_request_hold_date_val"></string>
+    <string name="register_preview_request_times_no">Following Order : </string>
+    <string name="register_preview_request_times_no_val">0000</string>
+    <string name="register_preview_request_item_no">Bid Number : </string>
+    <string name="register_preview_request_item_no_val">00000</string>
+    <string name="register_preview_request_car_name">Car Name : </string>
+    <string name="register_preview_request_car_name_val">XXXXXXXXXXXXXXXXXX</string>
+    <string name="register_preview_request_person_name">Person in Charge</string>
+    <string name="register_preview_request_tel">TEL</string>
+    <string name="register_preview_request_tel2">Mobile Phone</string>
+    <string name="register_preview_request_fax">FAX</string>
+    <string name="register_preview_request_outside_flag">Exterior</string>
+    <string name="register_preview_request_inside_flag">Interior</string>
+    <string name="register_preview_request_seat_flag">Seat Shape</string>
+    <string name="register_preview_request_capacity_flag">Capacity</string>
+    <string name="register_preview_request_drive_flag">Drive-train</string>
+    <string name="register_preview_request_audio_flag">Audio</string>
+    <string name="register_preview_request_engine_flag">Engine</string>
+    <string name="register_preview_request_wheel_flag">Wheel</string>
+    <string name="register_preview_request_electric_flag">Electrical System</string>
+    <string name="register_preview_request_tire_flag">Tire Groove</string>
+    <string name="register_preview_request_power_steering_flag">Power Steering</string>
+    <string name="register_preview_request_size_flag">Body dimension</string>
+    <string name="register_preview_request_request_memo">Others</string>
+    <string name="register_preview_request_apply_button">Apply</string>
+    <string name="register_preview_request_no_person_name">Input name of the person in charge.</string>
+    <string name="register_preview_request_no_tel">Input TEL or Mobile phone number.</string>
+    <string name="register_preview_request_no_tel2">Input TEL or Mobile phone number.</string>
+    <string name="register_preview_request_no_fax">Input FAX.</string>
+    <string name="register_preview_request_no_checkbox">Select Preview Content.</string>
+    <string name="register_preview_request_success">Registration for Preview Request Application is done.\nPlease, call the auction site you have applied.</string>
+    <string name="register_preview_request_imageview_description"></string>
+    <string name="register_preview_request_hint"></string>
+    <string name="register_preview_request_title_confirm_dialog">Preview Request Application</string>
+    <string name="register_preview_request_message_confirm_dialog">Confirm to register Preview Request?</string>
+    <string name="register_preview_request_ok">OK</string>
+    <string name="register_preview_request_cancel">Cancel</string>
+
+    <string name="register_absence_bid_title">事前入札</string>
+    <string name="register_absence_bid_title_error">登録エラー</string>
+    <string name="register_absence_bid_title_nobid">購入予約</string>
+    <string name="register_absence_bid_message_title">Input Absence Price</string>
+    <string name="register_absence_bid_error_message_input_price_title">Input Absence Price</string>
+    <string name="register_absence_bid_price">事前入札価格</string>
+    <string name="register_absence_bid_price_hint"></string>
+    <string name="register_absence_bid_money_yen">¥</string>
+    <string name="register_absence_bid_money_dol">$</string>
+    <string name="register_absence_bid_money_unit"></string>
+    <string name="register_absence_bid_start_price">スタート価格:\u0020</string>
+    <string name="register_absence_bid_start_price_nobid">購入予約価格:\u0020</string>
+    <string name="register_absence_bid_contents">事前入札については、セリ開始予想時 刻の１時間前で締め切ります。解除についても、同様に締め切ります。</string>
+    <string name="register_absence_bid_contents_nobid">購入予約については、セリ開始予想時 刻の１時間前で締め切ります。解除についても、同様に締め切ります。</string>
+    <string name="register_absence_bid_message_no_input_price">You must input price!!!</string>
+    <string name="register_absence_bid_message_input_price_greater_than_zero">Price is greater than zero!!</string>
+    <string name="register_absence_bid_message_register_success_title">事前入札</string>
+    <string name="register_absence_bid_message_register_success">事前入札の登録が完了しました。</string>
+    <string name="register_absence_bid_message_register_success_nobid">購入予約の登録が完了しました。</string>
+    <string name="register_absence_bid_message_un_register_success_title">事前入札</string>
+    <string name="register_absence_bid_message_un_register_success">事前入札の解除が完了しました。</string>
+    <string name="register_absence_bid_message_un_register_success_nobid">購入予約の解除が完了しました。</string>
+    <string name="register_absence_bid_message_confirm_register">事前入札を登録してもよろしいですか？</string>
+    <string name="register_absence_bid_message_confirm_register_nobid">購入予約を登録してもよろしいですか？</string>
+    <string name="register_absence_bid_message_confirm_un_register">事前入札を解除してもよろしいですか？</string>
+    <string name="register_absence_bid_message_confirm_un_register_nobid">購入予約を解除してもよろしいですか？</string>
+    <string name="register_absence_bid_ok">OK</string>
+    <string name="register_absence_bid_cancel">Cancel</string>
+
+    <string name="delete_image_confirm_title">Delete Photo</string>
+    <string name="delete_image_confirm_message">Are you sure you want to delete a photo?</string>
+    <string name="delete_image_confirm_ok">OK</string>
+    <string name="delete_image_confirm_cancel">Cancel</string>
+    <!-- Maker List(5.1.1.	メーカー選択（車名検索） -->
+    <string name="manufacturer_title">Select Maker</string>
+    <string name="manufacturer_title_7">Select Maker (Market)</string>
+    <string name="manufacturer_message_no_manufacturer_title">Error in Data Receiving</string>
+    <string name="manufacturer_search_message_no_manufacturer">No Maker Info</string>
+    <string name="manufacturer_format_count_label">(%s)</string>
+    <string name="manufacturer_search_message_invalidated_title">Select Maker</string>
+    <string name="manufacturer_search_message_no_place">Select Site</string>
+    <!-- 5.1.2.	車名選択（車名検索(select carname) -->
+    <string name="car_name_title">Select Car Name</string>
+    <string name="car_name_title_7">Select Car Name (Market)</string>
+    <string name="car_name_format_count_label">(%s)</string>
+    <string name="car_name_message_no_car_name_title">Search Car Name</string>
+    <string name="car_name_search_message_no_car_name">No Car Name Info</string>
+	<string name="car_name_search_message_invalidated_title">Select Maker</string>
+    <string name="car_name_search_message_no_place">Please, select Site</string>
+    
+    
+    
+    
+    <string name="auction_status_screen_title">Auction State</string>
+    <string name="auction_status_message_title">Select Site</string>
+    <string name="auction_status_no_place">No Bid Info.</string>
+    <string name="auction_status_lane_title">Lane</string>
+    <string name="auction_status_product_no">Bid No.</string>
+    <string name="auction_status_corner">Corner</string>
+    <string name="auction_status_format_time">%sth</string>
+    <string name="auction_status_format_time_1">%sst</string>
+    <string name="auction_status_format_time_2">%snd</string>
+    <string name="auction_status_format_time_3">%sfd</string>
+    <string name="top_search_real_time_text">Today Open</string>
+    <string name="top_search_time_count_format">[%s回]</string>
+    <string name="top_search_time_count_format_1">[%s回]</string>
+    <string name="top_search_time_count_format_2">[%s回]</string>
+    <string name="top_search_time_count_format_3">[%s回]</string>
+    <string name="top_search_announce_title">ニュース</string>
+    
+    <string name="oneprice_title">N1 Sokketsu</string>
+    <string name="item_detail_oneprice_txt">Sokketsu Price</string>
+    <string name="item_detail_oneprice_status">Sokketsu Status</string>
+    <string name="one_price_confirm">Confirm to register the N1Sokketsu.</string>
+    <string name="one_price_ok">OK</string>
+    <string name="one_price_cancel">Cancel</string>
+    <string name="one_price_push_message_success">Registration of N1Sokketsu is done.</string>
+    <string name="one_price_push_message_un_success">Registration of N1Sokketsu is failed.</string>
+    <string name="one_price_money_yen">¥</string>
+    <string name="one_price_money_unit"></string>
+    <string name="one_price_cost">Price：</string>
+
+    <!--Duongnp Added 2018/09/18-->
+    <string name="not_today_title">開催通知</string>
+    <string name="not_today">オークション開始前です。</string>
+    <string name="splash_button1_content">Login here</string>
+    <string name="splash_button2_content">If you do not have an account,\nclick here</string>
+    <string name="splash_text1">Happy to the world</string>
+    <string name="splash_text2">Happy the world</string>
+    <string name="login_create_accout">Create your account</string>
+    <string name="login_market_info">Market information</string>
+    <string name="login_login_btn_text">ログイン</string>
+    <string name="logoff_btn_text">ログオフ</string>
+    <string name="sell_number_search">商品検索</string>
+    <string name="kako_kensaku_title">過去商品検索</string>
+    <string name="type_search">種別検索</string>
+    <string name="list_search">コーナー検索</string>
+    <string name="absence_bid_btn_text">登録</string>
+    <string name="contact_btn_text">質問</string>
+    <string name="cancel_text">解除</string>
+    <string name="no_bid">引き</string>
+    <string name="other_bid">決定</string>
+    <string name="on_hold">保留</string>
+    <string name="winning_bid">落札</string>
+    <string name="start">スタート</string>
+    <string name="bid_right">権利</string>
+    <string name="bid_under">Under</string>
+    <string name="bid_over">売り切り</string>
+    <string name="correction">Correction</string>
+    <string name="close">閉じる</string>
+    <string name="use_agreement">利用規約</string>
+
+
+    <!--help screen-->
+    <string name="type_help_title">About Type Search</string>
+   <string name="type_help_des">Based on the input free word, search from the following types.</string>
+   <string name="type_help_list">Brand \nPart number (Ref) \nProduct name \nModel name \nSex \nType of clock \nCase material \nBelt material</string>
+
+   <string name="list_help_title">About the list screen</string>
+   <string name="list_help_des">The list display items are as follows</string>
+   <string name="list_help_txt1">thumbnail</string>
+   <string name="list_help_txt2">Lot number \nType of clock \nRank \nSeri result</string>
+   <string name="list_help_txt3">brand name</string>
+   <string name="list_help_txt4">Last bid price</string>
+
+    <string name="detail_help_title">About exhibition details</string>
+    <string name="detail_help_des">By tapping the photo, you can enlarge the photo. In case</string>
+
+    <string name="absence_help_title">About absentee bid price input</string>
+    <string name="absence_help_des1">. For absentee bidding, close the deadline one hour before the expected start time. We will close the deadline as well.</string>
+    <string name="absence_help_des2">. The amount you enter for the absentee price depends on the start price.</string>
+    <string name="absence_help_txt1">$5 - $100          :        Start price + $5</string>
+    <string name="absence_help_txt2">$100 - $1000       :        Start price + $10</string>
+    <string name="absence_help_txt3">$1000 - $3000      :        Start price + $30</string>
+    <string name="absence_help_txt4">$3000 -            :        Start price + $50</string>
+
+    <string name="bid_help_title">About bidding</string>
+    <string name="bid_help_des1">. The current price when tapping the bid button is not the bid price, the current price + 1 push will be the bid price. The amount of 1 push depends on the current price.</string>
+    <string name="bid_help_des2">Elevating current price from</string>
+    <string name="bid_help_txt1">$5 to $100       :        $5</string>
+    <string name="bid_help_txt2">$100 to $1000    :        $10</string>
+    <string name="bid_help_txt3">$1000 to $3000   :        $30</string>
+    <string name="bid_help_txt4">$3000 to         :        $50</string>
+
+    <!--New Item Detail label-->
+    <string name="event_date">開催日</string>
+    <string name="item_detail_sell_number">出品番号</string>
+    <string name="absentee_price">事前入札</string>
+    <string name="register">Register</string>
+    <string name="ic_number">IC number</string>
+    <string name="part_number">Part number (Ref)</string>
+    <string name="pro_name">Product name</string>
+    <string name="model_name">Model name</string>
+    <string name="sex">Sex</string>
+    <string name="type_of_clock">Type of clock</string>
+    <string name="case_material">Case material</string>
+    <string name="belt_mat">Belt material</string>
+    <string name="dial">Dial</string>
+    <string name="movement">Movement</string>
+    <string name="bezel">Bezel</string>
+    <string name="draft_shield">Draft shield</string>
+    <string name="prc_in_jp">Reference price in Japan</string>
+    <string name="pro_spe_detail">Product specification details</string>
+    <string name="case_dia">Case diameter</string>
+    <string name="org_no1">Original No</string>
+    <string name="org_no2">Original No2</string>
+    <string name="serial">Serial</string>
+    <string name="accessories">Accessories</string>
+    <string name="year_mnf">Year of manufacture</string>
+    <string name="item">Item</string>
+    <string name="rank">Rank</string>
+    <string name="last_price">最終落札価格</string>
+    <string name="belt_condition">Belt Condition</string>
+    <string name="send_mail_confirm_title">Send Password</string>
+    <string name="send_mail_confirm_mess">Do you want to send the password to the registered e-mail address</string>
+    <string name="send_mail_success_title">Password sent</string>
+    <string name="send_mail_success_mess">Your password has been sent</string>
+    <string name="send_mail_error_title">Error!</string>
+    <string name="send_mail_error_mess">Please check your login ID</string>
+    <string name="request_pass_text">新規会員はこちら</string>
+
+    <string name="item_nm">商品名</string>
+    <string name="brand_nm">ブランド名</string>
+    <string name="details">備考</string>
+    <string name="sell_status">状態</string>
+    <string name="group_nm">グループ名</string>
+    <string name="member_nm">メンバー名</string>
+    <string name="asking_price">販売価格</string>
+
+    <string name="auction_result">オークション結果</string>
+    <string name="setup_logBtn">ログ送信</string>
+    <string name="sendlog_screen_title">ログ設定</string>
+    <string name="sendlog_btn_title">ログを送信する</string>
+    <string name="sendlog_msg_title"></string>
+    <string name="sendlog_msg_content">ログを送信しますか?</string>
+    <string name="sendlog_success_title"></string>
+    <string name="sendlog_success_content">ログを送信しました。</string>
+    <string name="sendlog_error_title"></string>
+    <string name="sendlog_error_content">エラーを発生しました。</string>
+    <string name="notification_channel">CHANNEL_NOTIFICATION_BACKGROUND</string>
+
+    <string name="agree">規約に同意して次へ進む</string>
+
+    <string name="phone_confirm_title">Confirm Phone Number</string>
+    <string name="change_phone_title">Change Phone Number</string>
+    <string name="push_setting">お気に入り通信</string>
+    <string name="use_agree"><u>Use Agreement</u></string>
+    <string name="resend"><u>Resend</u></string>
+    <string name="verification_failed_title"></string>
+    <string name="verify_failed_content">Verification failed</string>
+    <string name="get_ctr_failed_title"></string>
+    <string name="get_ctr_failed_content">Cannot get countries\'s list</string>
+    <string name="go_to_store">To Play Store</string>
+
+
+    <string name="detai_row_1">事前入札価格</string>
+    <string name="detai_row_2">詳細</string>
+    <string name="detai_row_3">箱番号-枝番号</string>
+    <string name="detai_row_4">セリ順</string>
+    <string name="detai_row_5">カテゴリ</string>
+    <string name="detai_row_6">ブランド名</string>
+    <string name="detai_row_7">素材</string>
+    <string name="detai_row_8">ライン</string>
+    <string name="detai_row_9">モデル名１</string>
+    <string name="detai_row_10">モデル名２</string>
+    <string name="detai_row_11">型番</string>
+    <string name="detai_row_12">参考価格</string>
+    <string name="detai_row_14">付属品</string>
+    <string name="detai_row_15">ブレス</string>
+    <string name="detai_row_16">個体番号</string>
+    <string name="detai_row_17">色</string>
+    <string name="detai_row_18">サイズ</string>
+    <string name="detai_row_19">機械</string>
+    <string name="detai_row_20">バイヤーズコメント</string>
+    <string name="detai_row_21">スタート価格</string>
+    <string name="detai_row_22">セリ結果</string>
+    <string name="detai_row_13">ランク</string>
+    <string name="detai_row_23">中カテゴリ</string>
+    <string name="detai_row_24">問い合わせ</string>
+    <string name="detai_row_25">メモ\n（最大200文字）</string>
+    <string name="detai_row_26">メモ</string>
+    <string name="bid_detail_btn">詳細情報</string>
+
+    <string name="top_kako_btn">過去開催</string>
+    <string name="top_souba_btn">相場検索</string>
+    <string name="top_menu_btn">出品検索</string>
+    <string name="top_kaisai_title">開催日(Auction day)</string>
+    <string name="top_tokei">時計</string>
+    <string name="top_kaden">家電</string>
+    <string name="top_bag">バッグ</string>
+    <string name="top_wallet">小物</string>
+    <string name="top_jewel">宝石</string>
+
+    <string name="search_category_tab">カテゴリ検索</string>
+    <string name="search_hako_tab">箱番検索</string>
+    <string name="search_kensaku_btn">検索する</string>
+    <string name="search_kaisaitsuki">開催月</string>
+    <string name="search_category">カテゴリ</string>
+    <string name="search_chuucategory">中カテゴリ</string>
+    <string name="search_brand">ブランド名</string>
+    <string name="search_rank">ランク</string>
+    <string name="search_freeword">フリーワード</string>
+    <string name="search_hako">箱番</string>
+    <string name="top_cannot_getdata">データを取得できませんでした。\nネットワーク状態を確認してください</string>
+    <string name="top_reconnect">再取得</string>
+    <string name="top_back_to_login">ログイン画面へ戻る</string>
+
+    <string name="list_osatsu_kin">最終応札価格：</string>
+    <string name="list_raku_kin">落札：</string>
+    <string name="list_horyu_kin">保留：</string>
+    <string name="list_hiki_txt">不成立</string>
+    <string name="list_auction_mae">オークション前</string>
+    <string name="list_total_price">合計金額: </string>
+    <string name="list_fuzai_t">入札: %s円 </string>
+    <string name="correction_btn">訂正あり  ＞</string>
+    <string name="correction_box_title">箱枝番</string>
+    <string name="correction_title">訂正内容</string>
+    <string name="rest_des1">現在休憩中</string>
+    <string name="rest_time">から</string>
+    <string name="rest_des2">セリを再開します</string>
+    <string name="rest_sell">【次セリ : </string>
+
+    <string name="list_Horyu_kosho_suru">交渉する</string>
+    <string name="list_Horyu_kosho_chu">交渉中</string>
+    <string name="list_Horyu_kosho_mae">交渉前</string>
+    <string name="list_Horyu_kosho_ari">交渉あり</string>
+    <string name="list_Horyu_kosho_hiki">不成立</string>
+    <string name="list_Horyu_kosho_seiritsu">成立</string>
+    <string name="register_negotiation_title">保留交渉</string>
+    <string name="register_negotiation_lastBidPrice_title">最終応札価格：</string>
+    <string name="register_negotiation_lastBidPrice_title2">最終応札価格：</string>
+    <string name="register_negotiation_askingPrice_title">指値：</string>
+    <string name="register_negotiation_money_title">交渉価格：</string>
+    <string name="register_negotiation_money_unit">円</string>
+    <string name="register_negotiation_Button_hiki">不可</string>
+    <string name="register_negotiation_Button_hiki2">不可</string>
+    <string name="register_negotiation_Button_sonomamaRaku">そのまま成立</string>
+    <string name="register_negotiation_Button_kosho">交渉する</string>
+    <string name="register_negotiation_Button_raku">落札</string>
+    <string name="register_negotiation_Button_raku2">成立</string>
+    <string name="register_negotiation_message_title"></string>
+    <string name="register_negotiation_message_no_holdPrice">交渉価格を入力してください。</string>
+    <string name="register_negotiation_message_holdPrice_check">最終応札価格より高い金額を入力してください。</string>
+    <string name="register_negotiation_message_holdPrice_check2">指値以下の金額を入力してください。</string>
+    <string name="register_negotiation_message_holdPrice_check3">交渉価格以下の金額を入力してください。</string>
+    <string name="register_negotiation_message_confirm_hiki">「不可」にします。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_confirm_hiki2">「交渉不可」にします。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_confirm_raku">%s\nで成立します。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_confirm_raku2">%s\nで落札します。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_confirm_kosho">%s\nこの金額で交渉開始します。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_confirm_saikosho">%s\nこの金額で再交渉します。よろしいですか？\n※1度登録した価格は変更できません。</string>
+    <string name="register_negotiation_message_success">登録が完了しました。</string>
+    <string name="register_negotiation_ok">OK</string>
+    <string name="register_negotiation_cancel">Cancel</string>
+    <string name="neg_hold_flg">交渉不可でも売り</string>
+    <string name="list_chk_showkosho"> 交渉一覧を表示する</string>
+
+
+    <string name="register_negotiation_money_title2">価格：</string>
+    <string name="register_negotiation_Button_saikosho">再交渉する</string>
+    <string name="list_saikoshochu">再交渉中</string>
+    <string name="btn_saikosho_raku">成立する</string>
+    <string name="saikosho_holdprice">交渉価格:　%s</string>
+    <string name="saikosho_reholdprice">再交渉価格:　%s</string>
+    <string name="neg_descrip1">最終応札価格で【そのまま成立】、交渉する場合は金額を入力し\n【交渉する】を押してください。</string>
+    <string name="neg_descrip2">【出品者へ再交渉する場合は、下記に交渉金額を入力して\n再交渉するボタンを押してください。】</string>
+    <string name="neg_lastbidprice2">最終応札価格：%s</string>
+    <string name="neg_confirm_chkbox">【交渉不可でも売り】にチェックが入っています。
+    よろしいですか？</string>
+    <string name="items_info_sort_horyu_kosho_dialog_title">表示項目</string>
+    <string-array name="items_info_list_sort_item_by_horyu_kosho" >
+<!--        <item>保留商品</item>-->
+<!--        <item>交渉あり商品</item>-->
+        <item>成立</item>
+        <item>不成立</item>
+        <item>全て</item>
+    </string-array>
+    <string name="neg_shiborikomi">絞り込み</string>
+    <string-array name="items_info_list_sort_item_by_horyu_kosho_disp" >
+<!--        <item>表示中：保留</item>-->
+<!--        <item>表示中：交渉あり</item>-->
+        <item>表示中：成立</item>
+        <item>表示中：不成立</item>
+        <item>表示中：全て</item>
+
+    </string-array>
+    <string name="auc_memo_tite">メモ：</string>
+    <string name="auc_setting_Description">【メモ設定】\n
+オークション画面でメモ情報の設定を選択してください。</string>
+    <string name="auc_setting_ok">非表示</string>
+    <string name="auc_setting_deny">表示</string>
+    <string name="mypage_seisan"><u>精算書</u></string>
+    <string name="mypage_btn_text">マイページ</string>
+    <string name="mypage_title">マイページ</string>
+    <string name="mypage_descrip">下記リンクから各種PDFファイルのダウンロードが可能です。</string>
+    <string name="neg_fuzai">事前入札額：%s</string>
+    <string name="neg_memoTitle">メモ</string>
+    <string name="neg_fast_kosho">指値で交渉する</string>
+    <string name="neg_popup_title">交渉情報</string>
+    <string name="neg_popup_lastbid">最終応札価格：%s</string>
+    <string name="neg_popup_holdprice">交渉価格：%s</string>
+    <string name="neg_popup_rehold">再交渉価格：%s</string>
+    <string name="search_zenken_confirm">1つ以上の検索項目を入力してください。</string>
+    <string name="list_need_reload">交渉データが更新されました。\nリロードします。</string>
+    <string name="neg_pop_holdFlg">　【交渉不可でも売りチェックあり】</string>
+    <string name="detai_row_27">指値</string>
+
+
+    <string name="hoseki_detail_1">事前入札価格</string>
+    <string name="hoseki_detail_2_1">スタート価格</string>
+    <string name="hoseki_detail_2_2">指値</string>
+    <string name="hoseki_detail_3">ブランド名/主石</string>
+    <string name="hoseki_detail_4">主石目</string>
+    <string name="hoseki_detail_5">脇石/石目</string>
+    <string name="hoseki_detail_6">バイヤーズコメント</string>
+    <string name="hoseki_detail_7">金性</string>
+    <string name="hoseki_detail_8">重量</string>
+    <string name="hoseki_detail_9">品目</string>
+    <string name="hoseki_detail_10">グレード1</string>
+    <string name="hoseki_detail_11">グレード2</string>
+    <string name="hoseki_detail_12">グレード3</string>
+    <string name="hoseki_detail_13">グレード4</string>
+    <string name="hoseki_detail_14">付属品</string>
+    <string name="hoseki_detail_15">詳細</string>
+    <string name="hoseki_detail_16">サイズ1</string>
+    <string name="hoseki_detail_17">サイズ2</string>
+    <string name="hoseki_detail_18">サイズ3</string>
+    <string name="hoseki_detail_19">サイズ4</string>
+    <string name="hoseki_detail_20">カテゴリ</string>
+    <string name="hoseki_detail_21">中カテゴリ</string>
+    <string name="hoseki_detail_22">箱番ー枝番</string>
+    <string name="hoseki_detail_23">セリ順</string>
+    <string name="hoseki_detail_24">セリ結果</string>
+    <string name="hoseki_detail_25">問い合わせ</string>
+    <string name="hoseki_detail_26">メモ\n(最大200文字)</string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/blockWapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#333333"
+    >
+
+    <RelativeLayout
+        android:id="@+id/blLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/surfaceView"
+        >
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="46dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/camera_back_button_style"
+            />
+    </RelativeLayout>
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/blRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/surfaceView"
+    >
+        <ImageButton
+            android:id="@+id/btnCapture"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/camera_capture_button_style"
+            />
+
+        <ImageButton
+            android:id="@+id/btnFlash"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/camera_flash_on_button_style"
+            />
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pgbIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/lblContinueMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:rotation="90"
+        android:padding="2dp"
+        android:translationX="0dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/camera_dialog_continue_capture"
+            android:background="@android:color/black"
+            android:padding="3dp"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

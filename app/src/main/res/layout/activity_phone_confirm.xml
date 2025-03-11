@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/background">
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00e64d" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/phone_confirm_title"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/top_text_header_size"
+            android:id="@+id/top_title"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/blockHeader"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockBody"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="290dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/login_banner"/>
+        <TextView
+            android:id="@+id/txtDescrip"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="We will verify your identity using SMS"
+            android:textColor="#000000"
+            android:textSize="14dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/txtCountry"
+                android:focusable="false"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_edittext"
+                android:hint="Select a country"
+                android:paddingLeft="20dp"
+                android:textSize="18dp"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:ellipsize="end"
+                android:textColorHint="#d3d3d3"
+                />
+            <ImageButton
+                android:id="@+id/btnSelect"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/spinner_arr_down"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:paddingTop="19dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="17dp"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/txtPhone"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_edittext"
+            android:hint="Enter phone number"
+            android:paddingLeft="20dp"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:ellipsize="end"
+            android:textColorHint="#d3d3d3"
+            android:maxLength="20"
+            />
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/phone_confirm_btn"
+            android:layout_gravity="center"
+            android:text="I agree to the terms and send SMS"
+            android:textColor="@color/custom_white_color"
+            android:textAllCaps="false"
+            android:textSize="14dp"/>
+        <Button
+            android:id="@+id/btnAgree"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:text="@string/use_agree"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_lightblack_color"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:background="#ffffff"
+        android:id="@+id/lstCountry"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="263dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:visibility="gone"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:transcriptMode="disabled"
+        >
+    </ExpandableListView>
+
+    <TextView
+        android:layout_below="@+id/blockHeader"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:id="@+id/versionTxt"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:text=""
+        android:gravity="end"/>
+</RelativeLayout>
+
+
+

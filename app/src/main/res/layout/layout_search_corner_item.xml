@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68.5dp"
+    android:id="@+id/blockCornerItem"
+    android:background="@drawable/custom_corner_item"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+     >
+    
+    <TextView
+        android:id="@+id/lblCornerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Corner Name"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/lblStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:text="10:20~"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+    
+    <TextView
+        android:id="@+id/lblCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="2dp"
+        android:text="260"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/lblBoxNoRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="12dp"
+        android:text="324324-234324"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+    
+    
+</RelativeLayout>

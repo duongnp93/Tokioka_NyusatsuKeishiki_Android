@@ -1,0 +1,779 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:duplicateParentState="false"
+    android:noHistory="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:background="@drawable/common_bar_bg" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_back_button_style" />
+
+        <TextView
+            android:id="@+id/lblScreenTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="@dimen/item_detail_margin"
+            android:gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/btnBack"
+            android:text="@string/register_preview_request_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/preview_request_title" />
+
+        <!-- <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="51.5dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_help_button_style" /> -->
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scvDetailsPreviewRequest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blockHeader">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_label_note_margin"
+                    android:layout_height="@dimen/preview_request_row_note_height" >
+
+                    <TextView
+                        android:id="@+id/lblNotePart1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="bottom"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_note_line1_part1"
+                        android:textColor="#FF878A"
+                        android:textSize="@dimen/preview_request_lable_note_size" />
+
+                    <TextView
+                        android:id="@+id/lblNotePart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/preview_request_lable_note_line1_part2_margin_left"
+                        android:layout_marginTop="@dimen/preview_request_lable_note_line1_part2_margin_top"
+                        android:layout_toRightOf="@+id/lblNotePart1"
+                        android:gravity="top"
+                        android:text="@string/register_preview_request_note_line1_part2"
+                        android:textColor="#FF878A"
+                        android:textSize="@dimen/preview_request_lable_note_line1_part2_size" />
+
+                    <TextView
+                        android:id="@+id/lblNotePart3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/lblNotePart2"
+                        android:gravity="bottom"
+                        android:text="@string/register_preview_request_note_line1_part3"
+                        android:textColor="#FF878A"
+                        android:textSize="@dimen/preview_request_lable_note_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_label_note_margin"
+                    android:layout_height="@dimen/preview_request_row_note_height" >
+
+                    <ImageButton
+                        android:id="@+id/btnRuleURL"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/preview_request_label_padding"
+                        android:layout_marginLeft="@dimen/preview_request_button_margin_left"
+                        android:background="@null"
+                        android:contentDescription="@string/register_preview_request_title"
+                        android:gravity="center_vertical"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/preview_request_team_of_use" />
+
+                    <TextView
+                        android:id="@+id/lblNote2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_margin_left"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_note_line2"
+                        android:textColor="#FF878A"
+                        android:textSize="@dimen/preview_request_lable_note_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#FFFFFF"
+                    android:contentDescription="@string/register_preview_request_imageview_description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!--  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height"
+                    android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                    android:layout_marginRight="@dimen/preview_request_label_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/lblPlaceName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_place_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size_small" />
+
+                    <TextView
+                        android:id="@+id/lblPlaceNameVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.275"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_place_name_val"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <TextView
+                        android:id="@+id/lblSpaceCenter1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:gravity="right|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <TextView
+                        android:id="@+id/lblHoldDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_hold_date"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size_small" />
+
+                    <TextView
+                        android:id="@+id/lblHoldDateVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.275"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_hold_date_val"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+                </LinearLayout>
+
+                <!--  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height"
+                    android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                    android:layout_marginRight="@dimen/preview_request_label_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/lblTimesNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.275"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_times_no"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size_small" />
+
+                    <TextView
+                        android:id="@+id/lblTimesNoVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <TextView
+                        android:id="@+id/lblSpaceCenter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:gravity="right|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <TextView
+                        android:id="@+id/lblItemNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.275"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_item_no"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <TextView
+                        android:id="@+id/lblItemNoVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+                </LinearLayout>
+
+                <!--  -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height" >
+
+                    <TextView
+                        android:id="@+id/lblCarName"
+                        android:layout_width="@dimen/preview_request_car_name_label_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_car_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size_small" />
+
+                    <TextView
+                        android:id="@+id/lblCarNameVal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/preview_request_label_margin"
+                        android:layout_toRightOf="@+id/lblCarName"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_edittext_size" />
+                </RelativeLayout>
+
+                <!--  -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height" >
+
+                    <TextView
+                        android:id="@+id/lblPersonName"
+                        android:layout_width="@dimen/preview_request_label_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_person_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size_small" />
+
+                    <EditText
+                        android:id="@+id/txtPersonNameVal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_request_edittext_height"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/preview_request_label_margin"
+                        android:layout_toRightOf="@+id/lblPersonName"
+                        android:background="@drawable/preview_status_update_edittext_style"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center"
+                        android:hint="@string/register_preview_request_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textFilter|textNoSuggestions"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:maxLength="32"
+                        android:textSize="@dimen/preview_request_edittext_size" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+
+                <!-- 出品番号 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height" >
+
+                    <TextView
+                        android:id="@+id/lblTel"
+                        android:layout_width="@dimen/preview_request_label_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_tel"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <EditText
+                        android:id="@+id/txtTelVal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_request_edittext_height"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/preview_request_label_margin"
+                        android:layout_toRightOf="@+id/lblTel"
+                        android:background="@drawable/preview_status_update_edittext_style"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center"
+                        android:hint="@string/register_preview_request_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textFilter|textNoSuggestions"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:maxLength="17"
+                        android:textSize="@dimen/preview_request_edittext_size" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height" >
+
+                    <TextView
+                        android:id="@+id/lblTel2"
+                        android:layout_width="@dimen/preview_request_label_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_tel2"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <EditText
+                        android:id="@+id/txtTel2Val"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_request_edittext_height"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/preview_request_label_margin"
+                        android:layout_toRightOf="@+id/lblTel2"
+                        android:background="@drawable/preview_status_update_edittext_style"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center"
+                        android:hint="@string/register_preview_request_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textFilter|textNoSuggestions"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:maxLength="17"
+                        android:textSize="@dimen/preview_request_edittext_size" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_height" >
+
+                    <TextView
+                        android:id="@+id/lblFax"
+                        android:layout_width="@dimen/preview_request_label_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_fax"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+
+                    <EditText
+                        android:id="@+id/txtFaxVal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_request_edittext_height"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/preview_request_label_margin"
+                        android:layout_toRightOf="@+id/lblFax"
+                        android:background="@drawable/preview_status_update_edittext_style"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center"
+                        android:hint="@string/register_preview_request_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textFilter|textNoSuggestions"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:maxLength="17"
+                        android:textSize="@dimen/preview_request_edittext_size" >
+                    </EditText>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageViewLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#FFFFFF"
+                        android:contentDescription="@string/register_preview_request_imageview_description" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:orientation="horizontal" >
+	                    <View android:id="@+id/strut1"
+				        android:layout_width="0dp"
+				        android:layout_height="0dp" 
+				        android:layout_centerHorizontal="true"/>
+	                    <CheckBox
+	                        android:id="@+id/cbOutsideFlag"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="match_parent"
+	                        android:gravity="center_vertical"
+		               		android:layout_alignRight="@id/strut1"
+		                    android:layout_alignParentLeft="true"
+	                        android:text="@string/register_preview_request_outside_flag"
+	                        android:textColor="@android:color/white"
+	                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+	                
+	                    <CheckBox
+	                        android:id="@+id/cbEngineFlag"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="match_parent"
+                        	android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut1"
+	                        android:gravity="center_vertical"
+	                        android:text="@string/register_preview_request_engine_flag"
+	                        android:textColor="@android:color/white"
+	                        android:textSize="@dimen/preview_request_lable_checkbox_size"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:orientation="horizontal" >
+                    <View android:id="@+id/strut2"
+			        android:layout_width="0dp"
+			        android:layout_height="0dp" 
+			        android:layout_centerHorizontal="true"/>
+                    <CheckBox
+                        android:id="@+id/cbInsideFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+		               	android:layout_alignRight="@id/strut2"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_inside_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                    
+					<CheckBox
+                        android:id="@+id/cbWheelFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut2"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_wheel_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:orientation="horizontal" >
+					<View android:id="@+id/strut3"
+			        android:layout_width="0dp"
+			        android:layout_height="0dp" 
+			        android:layout_centerHorizontal="true"/>
+                    <CheckBox
+                        android:id="@+id/cbSeatFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+		                android:layout_alignParentLeft="true"
+		               	android:layout_alignRight="@id/strut3"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_seat_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+					
+                    <CheckBox
+                        android:id="@+id/cbElectricFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut3"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_electric_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:orientation="horizontal" >
+					<View android:id="@+id/strut4"
+			        android:layout_width="0dp"
+			        android:layout_height="0dp" 
+			        android:layout_centerHorizontal="true"/>
+                    <CheckBox
+                        android:id="@+id/cbCapacityFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+		                android:layout_alignParentLeft="true"
+		               	android:layout_alignRight="@id/strut4"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_capacity_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+					
+                    <CheckBox
+                        android:id="@+id/cbTireFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut4"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_tire_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:orientation="horizontal" >
+					<View android:id="@+id/strut5"
+			        android:layout_width="0dp"
+			        android:layout_height="0dp" 
+			        android:layout_centerHorizontal="true"/>
+					
+                    <CheckBox
+                        android:id="@+id/cbDriveFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+		                android:layout_alignParentLeft="true"
+		               	android:layout_alignRight="@id/strut5"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_drive_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+					
+                    <CheckBox
+                        android:id="@+id/cbPowerSteeringFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut5"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_power_steering_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_checkbox_margin"
+                    android:layout_height="@dimen/preview_request_row_checkbox_height"
+                    android:orientation="horizontal" >
+					<View android:id="@+id/strut6"
+			        android:layout_width="0dp"
+			        android:layout_height="0dp" 
+			        android:layout_centerHorizontal="true"/>
+                  
+                    <CheckBox
+                        android:id="@+id/cbAudioFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+		                android:layout_alignParentLeft="true"
+		               	android:layout_alignRight="@id/strut6"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_audio_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                    <CheckBox
+                        android:id="@+id/cbSizeFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignLeft="@id/strut6"
+                        android:gravity="center_vertical"
+                        android:text="@string/register_preview_request_size_flag"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_checkbox_size" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+                    android:layout_marginRight="@dimen/preview_request_label_margin"
+                    android:layout_height="@dimen/preview_request_row_height"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/cb4"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/preview_request_label_padding"
+                        android:text="@string/register_preview_request_request_memo"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/preview_request_lable_size" />
+                </LinearLayout>
+
+                
+  				<LinearLayout
+	                 android:layout_width="match_parent"
+	                 android:layout_height="wrap_content"
+	                 android:layout_marginLeft="@dimen/preview_request_label_left_margin"
+	                 android:layout_marginRight="@dimen/preview_request_label_margin"
+	                 android:orientation="horizontal" >
+	                 <EditText
+	                     android:id="@+id/txtRequestMemo"
+	                     android:layout_width="match_parent"
+	                     android:layout_height="wrap_content"
+	                     android:background="@drawable/preview_status_update_edittext_style"
+	                     android:cursorVisible="true"
+	                     android:focusableInTouchMode="true"
+	                     android:gravity="top|left"
+	                     android:hint="@string/register_preview_request_hint"
+	                     android:inputType="text|textMultiLine|textNoSuggestions"
+	                     android:imeOptions="actionGo"
+	                     android:layout_marginLeft="@dimen/preview_request_label_padding"
+	                     android:layout_marginRight="@dimen/preview_request_label_padding"
+	                     android:paddingLeft="8dp"
+                         android:paddingRight="8dp"
+                         android:paddingBottom="3dp"
+                         android:paddingTop="3dp"
+	                     android:minHeight="@dimen/preview_request_edittext_memo_height"
+	                     android:maxHeight="@dimen/preview_request_edittext_memo_height"
+	                     android:textColor="#000000"
+                         android:maxLength="102"
+	                     android:textSize="@dimen/preview_request_lable_size" >
+	                 </EditText>
+	             </LinearLayout>
+
+	             <RelativeLayout
+	                 android:id="@+id/blockPreviewRequestCommand"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="50dp" >
+
+	                 <ImageButton
+	                     android:id="@+id/btnRegisterPreviewRequest"
+	                     android:layout_width="150dp"
+	                     android:layout_height="38dp"
+	                     android:layout_alignParentTop="true"
+	                     android:layout_centerHorizontal="true"
+	                     android:background="@null"
+	                     android:contentDescription="@string/register_preview_request_title"
+	                     android:gravity="center_vertical"
+	                     android:scaleType="fitCenter"
+	                     android:src="@drawable/preview_request_register_button_style" 
+	                     android:layout_marginTop="@dimen/preview_request_label_padding"/>
+	             </RelativeLayout>                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

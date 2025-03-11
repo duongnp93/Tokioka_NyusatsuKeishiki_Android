@@ -1,0 +1,524 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:duplicateParentState="false"
+    android:noHistory="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:background="#024AA6" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_back_button_style" />
+
+        <TextView
+            android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/register_negotiation_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blockPriceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockHeader"
+        >
+
+        <TextView
+            android:id="@+id/lblSellNo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/lblDescrip1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:lines="2"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/neg_descrip1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblSellNo"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/lblLastBidPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblDescrip1"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblAskingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblLastBidPrice"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/blockJisha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockPriceInfo" >
+
+        <RelativeLayout
+            android:id="@+id/blockPriceEdit"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            >
+            <TextView
+                android:id="@+id/lblLastBidPrice2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/btnSonomamaRaku"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="17dp" />
+            <Button
+                android:id="@+id/btnSonomamaRaku"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#fc0f0f"
+                android:gravity="center"
+                android:text="@string/register_negotiation_Button_sonomamaRaku"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                android:textAllCaps="false"></Button>
+            <TextView
+                android:id="@+id/lblEditTitle"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_vertical|right"
+                android:text="@string/register_negotiation_money_title2"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/lblLastBidPrice2"/>
+
+            <EditText
+                android:layout_below="@+id/lblLastBidPrice2"
+                android:id="@+id/txtHoldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@+id/lblEditTitle"
+                android:layout_toLeftOf="@+id/lblMoneyUnit"
+                android:background="@drawable/textbox_bg"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:focusableInTouchMode="true"
+                android:gravity="right|center"
+                android:imeOptions="actionGo"
+                android:inputType="numberSigned"
+                android:maxLength="8"
+                android:paddingRight="8dp"
+                android:textColor="#000000"
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_below="@+id/lblLastBidPrice2"
+                android:id="@+id/lblMoneyUnit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/btnKosho"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="@string/register_negotiation_money_unit"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                />
+            <Button
+                android:layout_below="@+id/lblLastBidPrice2"
+                android:id="@+id/btnKosho"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#1464b4"
+                android:gravity="center"
+                android:text="@string/register_negotiation_Button_kosho"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"></Button>
+            <CheckBox
+                android:id="@+id/chkBoxHoldFlg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/neg_hold_flg"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:buttonTint="@android:color/black"
+                android:layout_below="@+id/lblEditTitle"/>
+            <Button
+                android:layout_below="@+id/chkBoxHoldFlg"
+                android:id="@+id/btnFastKosho"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#1464b4"
+                android:gravity="center"
+                android:text="@string/neg_fast_kosho"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"></Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockJishaButton"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/blockPriceEdit"
+            android:layout_marginTop="-1dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnHikiByJisha"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="@string/register_negotiation_Button_hiki"
+                android:textColor="#FFA500"
+                android:textSize="18sp"
+                android:visibility="gone"></Button>
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/blockRaku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockPriceInfo" >
+
+        <RelativeLayout
+            android:id="@+id/blockPriceDisp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            >
+
+            <TextView
+                android:id="@+id/lblDispTitle"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/register_negotiation_money_title"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblHoldPrice"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="9dp"
+                android:layout_toLeftOf="@+id/btnRaku"
+                android:layout_toRightOf="@+id/lblDispTitle"
+                android:gravity="center|left"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnHikiByRaku"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/white"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="#FFA500"
+                android:text="@string/register_negotiation_Button_hiki2"
+                android:textSize="13sp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/btnRaku"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/btnHikiByRaku"
+                android:layout_marginRight="10dp"
+                android:background="#fc0f0f"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="@string/register_negotiation_Button_raku"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                >
+            </Button>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/lblDescrip2"
+                android:lines="2"
+                android:lineSpacingExtra="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/lblDispTitle"
+                android:text="@string/neg_descrip2"
+                android:textColor="@android:color/black"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/lblFuzai"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/lblDescrip2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:lines="1"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockRakuButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/blockPriceDisp"
+            >
+            <TextView
+                android:id="@+id/lblEditTitle2"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|right"
+                android:text="@string/register_negotiation_money_title2"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtReHoldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/lblEditTitle2"
+                android:layout_toLeftOf="@+id/lblMoneyUnit2"
+                android:background="@drawable/textbox_bg"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:focusableInTouchMode="true"
+                android:gravity="right|center"
+                android:imeOptions="actionGo"
+                android:inputType="numberSigned"
+                android:maxLength="8"
+                android:paddingRight="8dp"
+                android:textColor="#000000"
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/lblMoneyUnit2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/btnSaiKosho"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="@string/register_negotiation_money_unit"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/btnSaiKosho"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="#1464b4"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="@string/register_negotiation_Button_saikosho"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                >
+            </Button>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:visibility="gone"
+        android:id="@+id/blockSaikosho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockPriceInfo"
+        >
+        <TextView
+            android:id="@+id/lblHoldPrice2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblReHoldPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblHoldPrice2"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp" />
+        <RelativeLayout
+            android:id="@+id/blockSaikoshoButton"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/lblReHoldPrice"
+            >
+
+            <Button
+                android:id="@+id/btnHikiSaikosho"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnRakuSaikosho"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:textColor="#FFA500"
+                android:text="@string/register_negotiation_Button_hiki"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/btnRakuSaikosho"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="#fc0f0f"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="@string/btn_saikosho_raku"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                >
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/blockMemo"
+        android:layout_below="@+id/blockPriceInfo"
+        android:layout_marginTop="250dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/neg_memoTitle"
+            android:id="@+id/memoTitle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginLeft="25dp"
+            android:text=""
+            android:layout_marginRight="25dp"
+            android:id="@+id/memoContent"
+            android:layout_below="@id/memoTitle"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical"
+            />
+    </RelativeLayout>
+</RelativeLayout>

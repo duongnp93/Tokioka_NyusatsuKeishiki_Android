@@ -1,0 +1,513 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    tools:context=".activities.ItemsActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_main_menu"
+        android:background="@null" />
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#024AA6" >
+
+        <Button
+            android:id="@+id/btnLogoff"
+            android:layout_width="68.5dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:padding="0dp"
+            android:text="@string/logoff_btn_text"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/top_text_header_size"
+            android:id="@+id/top_title"
+            />
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/btnHelp"
+            android:layout_width="40dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/custom_help_icon"
+            android:contentDescription = "LUCE"
+            />
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_blue_white_button"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:padding="0dp"
+            android:text="@string/mypage_btn_text"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/blockBanner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:layout_marginTop="0dp"
+            android:background="@android:color/transparent">
+            <tokiokaability.auction.view.ViewPagerCustomDuration
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#ffffff"
+                android:layout_alignParentTop="true" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:padding="10dip"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/blockPlace"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginTop="0dp"
+            android:background="@android:color/transparent">
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/placeHeader"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp">
+                <ImageView android:scaleType="fitCenter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/mn_flag"
+                    android:id="@+id/flagImg"/>
+                <TextView android:id="@+id/placeHeaderTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/flagImg"
+                    android:paddingLeft="8dp"
+                    android:text="@string/top_kaisai_title"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    />
+                <Button android:id="@+id/soubaBtn"
+                    android:layout_centerVertical="true"
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/top_souba_btn"
+                    android:textColor="#024AA6"
+                    android:layout_toLeftOf="@+id/kakoBtn"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:background="@drawable/mn_greenbutton"
+                    android:layout_marginRight="@dimen/_3sdp"/>
+                <Button android:id="@+id/kakoBtn"
+                    android:layout_centerVertical="true"
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/top_kako_btn"
+                    android:textColor="#024AA6"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:background="@drawable/mn_greenbutton"/>
+            </RelativeLayout>
+
+            <LinearLayout android:background="@drawable/custom_corner_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/placeHeader"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2.5dp"
+                >
+                <TextView android:id="@+id/kaisai1Txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+
+                    />
+                <TextView android:id="@+id/kaisai2Txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    />
+                <TextView android:id="@+id/kaisai3Txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    />
+                <TextView android:id="@+id/kaisai4Txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/blockCorner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@android:color/transparent"
+            >
+            <ImageButton
+                android:id="@+id/btnTokei"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="2.5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/custom_tokei_btn"
+                android:tag="1"/>
+            <ImageButton android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/custom_kaden_btn"
+                android:id="@+id/btnKaden"
+                android:background="@android:color/transparent"
+                android:padding="2.5dp"
+                android:tag="2"
+                />
+            <ImageButton android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/custom_bag_btn"
+                android:id="@+id/btnBag"
+                android:background="@android:color/transparent"
+                android:padding="2.5dp"
+                android:tag="3"
+                />
+            <ImageButton android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/custom_wal_btn"
+                android:id="@+id/btnWal"
+                android:background="@android:color/transparent"
+                android:padding="2.5dp"
+                android:tag="4"
+                />
+            <ImageButton android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/custom_jw_btn"
+                android:id="@+id/btnJw"
+                android:background="@android:color/transparent"
+                android:padding="2.5dp"
+                android:tag="5"
+                />
+            <!--<ImageButton android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--android:src="@drawable/custom_njw_btn"-->
+                <!--android:id="@+id/btnNjw"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:padding="2.5dp"-->
+                <!--android:tag="6"-->
+                <!--/>-->
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/blockCornerText"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@android:color/transparent">
+            <TextView android:id="@+id/tokeiTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/top_tokei"
+                android:textSize="10dp"/>
+
+            <TextView android:id="@+id/kadenTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/top_kaden"
+                android:textSize="10dp"/>
+            <TextView android:id="@+id/bagTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/top_bag"
+                android:textSize="10dp"/>
+            <TextView android:id="@+id/wlTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/top_wallet"
+                android:textSize="10dp"/>
+            <TextView android:id="@+id/jwTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/top_jewel"
+                android:textSize="10dp"/>
+            <!--<TextView android:id="@+id/njwTxt"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:text="BJ"-->
+                <!--android:textSize="10dp"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blockSearch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/blockCornerText"
+            android:weightSum="1.0"
+            android:orientation="vertical"
+            >
+            <Button
+                android:id="@+id/btnProductSearch"
+                android:layout_height="match_parent"
+                android:layout_width="301dp"
+                android:layout_gravity="center"
+                android:background="@drawable/top_search_exhibition_button_style"
+                android:layout_weight="0.3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/top_menu_btn"
+                android:textAllCaps="false"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dp"
+                android:textSize="16dp"
+                android:textColor="@color/custom_black_color"
+                android:paddingTop="0dp"
+                android:paddingBottom="6dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockNotice"
+            android:layout_below="@+id/blockSearch"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent" >
+            <ImageView android:id="@+id/newsImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/mn_news"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_toRightOf="@id/newsImg"
+                android:id="@+id/lblNoticeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/top_search_announce_title"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="-10dp"/>
+        </RelativeLayout>
+
+        <ListView android:id="@+id/lvAnnounce"
+            android:layout_below="@+id/blockNotice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_corner_textview"
+            android:listSelector="@android:color/transparent"
+            android:layout_marginTop="-12dp"
+            android:dividerHeight="0dp"
+            android:divider="@android:color/transparent"
+            />
+        <LinearLayout android:id="@+id/subMenuArea"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/custom_corner_textview"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="40dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <ImageButton android:layout_height="35dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/mn_menu_1"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:id="@+id/btnMenu1"
+                android:tag="1"/>
+            <ImageButton android:layout_height="35dp"
+                android:padding="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_gravity="center"
+                android:src="@drawable/mn_menu_2"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:id="@+id/btnMenu2"
+                android:tag="2"/>
+            <ImageButton android:layout_height="35dp"
+                android:padding="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_gravity="center"
+                android:src="@drawable/mn_menu_3"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:id="@+id/btnMenu3"
+                android:tag="3"/>
+            <ImageButton android:layout_height="35dp"
+                android:padding="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_gravity="center"
+                android:src="@drawable/mn_menu_4"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:id="@+id/btnMenu4"
+                android:tag="4"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+    <ImageView
+            android:id="@+id/blockAds"
+            android:layout_below="@+id/blockHeader"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/top_search_default_ads" >
+
+    </ImageView>
+    -->
+
+
+    <ImageButton
+        android:id="@+id/btnBit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        android:src="@drawable/top_search_all_venue_button_style"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/btnBit2"/>
+    <ImageButton
+        android:id="@+id/btnBit2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        android:src="@drawable/top_search_all_venue_button_style2"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

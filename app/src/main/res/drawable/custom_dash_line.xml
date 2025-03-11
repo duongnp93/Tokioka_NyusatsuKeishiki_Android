@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+            <inset android:insetTop="-2dp"
+                android:insetBottom="-2dp"
+                android:insetLeft="-2dp">
+                <shape android:shape="rectangle">
+                    <stroke android:color="#8E8E8E"
+                        android:width="1dp"
+                        android:dashWidth="4dp"
+                        android:dashGap="4dp"
+                        >
+                    </stroke>
+                    <solid android:color="#ffffff"/>
+                </shape>
+            </inset>
+
+    </item>
+</selector>

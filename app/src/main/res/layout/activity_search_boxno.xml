@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" 
+    android:noHistory="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+     	android:layout_width="match_parent"
+     	android:layout_height="40dp"
+     	android:background="#024AA6">
+     	
+		<ImageButton
+		    android:id="@+id/btnBack"
+		    android:layout_width="45dp"
+		    android:layout_height="25dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="0dp"
+		    android:background="@null"
+            android:layout_marginTop="10dp"
+		    android:contentDescription="@string/app_name"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/common_back_button_style" />
+        
+       <TextView 
+           android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_header_size"
+            android:text="@string/sell_number_search"/>
+
+		<ImageButton
+			android:id="@+id/btnHelp"
+			android:layout_width="40dp"
+			android:layout_height="25dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="15dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
+			android:src="@drawable/custom_help_icon"
+			android:contentDescription = "LUCE"
+			android:visibility="gone"
+			/>
+
+    </RelativeLayout>
+	<RelativeLayout android:id="@+id/tabArea"
+		android:layout_width="match_parent" android:layout_height="50dp"
+		android:layout_below="@+id/blockHeader"
+		android:background="@android:color/transparent"
+		>
+		<View android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray"
+			android:layout_alignParentBottom="true"/>
+		<LinearLayout android:id="@+id/btnArea" android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/transparent">
+			<RelativeLayout android:layout_width="0dp" android:layout_height="match_parent"
+				android:layout_weight="1">
+				<Button
+					android:id="@+id/categoryBtn"
+					android:layout_height="match_parent"
+					android:layout_width="match_parent"
+					android:text="@string/search_category_tab"
+					android:textColor="@color/mn_tab_green"
+					android:textSize="17dp"
+					android:background="@android:color/transparent"
+					android:textAllCaps="false"
+					android:tag="1"/>
+				<View android:layout_width="120dp"
+					android:id="@+id/categoryBotLine"
+					android:layout_height="2.5dp"
+					android:background="#024AA6"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentBottom="true"
+					/>
+			</RelativeLayout>
+
+			<RelativeLayout android:layout_width="0dp" android:layout_height="match_parent"
+				android:layout_weight="1">
+				<Button
+					android:id="@+id/hakoBtn"
+					android:layout_height="match_parent"
+					android:layout_width="match_parent"
+					android:text="@string/search_hako_tab"
+					android:textColor="@color/mn_tab_black"
+					android:textSize="17dp"
+					android:textAllCaps="false"
+					android:background="@android:color/transparent"
+					android:tag="2"/>
+				<View android:layout_width="120dp"
+					android:id="@+id/hakoBotLine"
+					android:layout_height="2.5dp"
+					android:background="#024AA6"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentBottom="true"
+					android:visibility="gone"/>
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	<Button android:id="@+id/kensakuBtn"
+		android:layout_width="100dp"
+		android:layout_height="35dp"
+		android:text="@string/search_kensaku_btn"
+		android:textColor="@color/mn_text_green"
+		android:background="@drawable/mn_greenbutton"
+		android:layout_below="@+id/tabArea"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="20dp"
+		android:layout_marginRight="20dp"
+		android:textSize="16dp"
+		android:gravity="center"
+		android:paddingBottom="2dp"
+		android:textAllCaps="false"/>
+
+	<ScrollView
+		android:id="@+id/kensakuScroll"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/kensakuBtn"
+		android:layout_marginBottom="50dp"
+		android:visibility="visible">
+
+		<RelativeLayout
+			android:id="@+id/catKensaku"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="0dp"
+			android:visibility="visible">
+			<!--android:layout_below="@+id/kensakuBtn"-->
+			<LinearLayout
+				android:id="@+id/kaisaiGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="0dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical"
+				android:visibility="visible">
+
+				<TextView
+					android:id="@+id/kaisaiTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_kaisaitsuki"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/kaisaiRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<TextView
+						android:id="@+id/kaisaiTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/kaisaiClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:paddingLeft="20dp"
+						android:paddingRight="32dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageView
+						android:id="@+id/kaisaiArrow"
+						android:layout_width="15dp"
+						android:layout_height="15dp"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="15dp"
+						android:layout_toLeftOf="@+id/kaisaiClearBtn"
+						android:scaleType="fitCenter"
+						android:src="@drawable/arr_down" />
+
+					<ImageButton
+						android:id="@+id/kaisaiClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="7" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/catGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_below="@+id/kaisaiGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/catTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_category"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/catRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<TextView
+						android:id="@+id/catTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/catClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:paddingLeft="20dp"
+						android:paddingRight="32dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageView
+						android:id="@+id/catArrow"
+						android:layout_width="15dp"
+						android:layout_height="15dp"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="15dp"
+						android:layout_toLeftOf="@+id/catClearBtn"
+						android:scaleType="fitCenter"
+						android:src="@drawable/arr_down" />
+
+					<ImageButton
+						android:id="@+id/catClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="1" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/medCatGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_below="@+id/catGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/medCatTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_chuucategory"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/medCatRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<TextView
+						android:id="@+id/medCatTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/medCatClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:paddingLeft="20dp"
+						android:paddingRight="32dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageView
+						android:id="@+id/medCatArrow"
+						android:layout_width="15dp"
+						android:layout_height="15dp"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="15dp"
+						android:layout_toLeftOf="@+id/medCatClearBtn"
+						android:scaleType="fitCenter"
+						android:src="@drawable/arr_down" />
+
+					<ImageButton
+						android:id="@+id/medCatClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="6" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/brandGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_below="@+id/medCatGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/brandTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_brand"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/brandRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<TextView
+						android:id="@+id/brandTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/brandClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:paddingLeft="20dp"
+						android:paddingRight="32dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageView
+						android:id="@+id/brandArrow"
+						android:layout_width="15dp"
+						android:layout_height="15dp"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="15dp"
+						android:layout_toLeftOf="@+id/brandClearBtn"
+						android:scaleType="fitCenter"
+						android:src="@drawable/arr_down" />
+
+					<ImageButton
+						android:id="@+id/brandClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="2" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/rankGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_below="@+id/brandGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/rankTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_rank"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/rankRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<TextView
+						android:id="@+id/rankTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/rankClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:paddingLeft="20dp"
+						android:paddingRight="32dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageView
+						android:id="@+id/rankArrow"
+						android:layout_width="15dp"
+						android:layout_height="15dp"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="15dp"
+						android:layout_toLeftOf="@+id/rankClearBtn"
+						android:scaleType="fitCenter"
+						android:src="@drawable/arr_down" />
+
+					<ImageButton
+						android:id="@+id/rankClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="3" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/freeGroup"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_below="@+id/rankGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="20dp"
+				android:focusableInTouchMode="true"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/freeTitle"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="left"
+					android:text="@string/search_freeword"
+					android:textColor="@android:color/black"
+					android:textSize="17dp" />
+
+				<RelativeLayout
+					android:id="@+id/freeRel"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<EditText
+						android:id="@+id/freeTxt"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginRight="5dp"
+						android:layout_toLeftOf="@+id/freeClearBtn"
+						android:background="@drawable/mn_greenbutton"
+						android:gravity="center_vertical"
+						android:maxLength="100"
+						android:paddingLeft="20dp"
+						android:singleLine="true"
+						android:textColor="@android:color/black"
+						android:textSize="16dp" />
+
+					<ImageButton
+						android:id="@+id/freeClearBtn"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerInParent="true"
+						android:background="@android:color/transparent"
+						android:scaleType="fitCenter"
+						android:src="@drawable/mn_search_close"
+						android:tag="4" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<ListView
+				android:id="@+id/kaisaiLst"
+				android:layout_width="match_parent"
+				android:layout_height="120dp"
+				android:layout_below="@+id/kaisaiGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="42dp"
+				android:background="#ffffff"
+				android:divider="@null"
+				android:dividerHeight="0dp"
+				android:nestedScrollingEnabled="true"
+				android:visibility="gone" />
+
+			<ListView
+				android:id="@+id/catLst"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				android:layout_below="@+id/catGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="42dp"
+				android:background="#ffffff"
+				android:divider="@null"
+				android:dividerHeight="0dp"
+				android:nestedScrollingEnabled="true"
+				android:visibility="gone" />
+
+			<ListView
+				android:id="@+id/medCatLst"
+				android:layout_width="match_parent"
+				android:layout_height="120dp"
+				android:layout_below="@+id/medCatGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="42dp"
+				android:background="#ffffff"
+				android:divider="@null"
+				android:dividerHeight="0dp"
+				android:nestedScrollingEnabled="true"
+				android:visibility="gone" />
+
+			<ListView
+				android:id="@+id/brandLst"
+				android:layout_width="match_parent"
+				android:layout_height="240dp"
+				android:layout_below="@+id/brandGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="42dp"
+				android:background="#ffffff"
+				android:divider="@null"
+				android:dividerHeight="0dp"
+				android:nestedScrollingEnabled="true"
+				android:visibility="gone" />
+
+			<ListView
+				android:id="@+id/rankLst"
+				android:layout_width="match_parent"
+				android:layout_height="160dp"
+				android:layout_below="@+id/rankGroup"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="42dp"
+				android:background="#ffffff"
+				android:divider="@null"
+				android:dividerHeight="0dp"
+				android:nestedScrollingEnabled="true"
+				android:visibility="gone" />
+		</RelativeLayout>
+
+	</ScrollView>
+
+	<RelativeLayout
+		android:id="@+id/hakoKensaku"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/kensakuBtn"
+		android:visibility="gone">
+		<LinearLayout
+			android:id="@+id/kaisaiGroup2"
+			android:layout_width="match_parent"
+			android:layout_height="70dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="0dp"
+			android:layout_marginRight="20dp"
+			android:orientation="vertical"
+			android:visibility="visible">
+
+			<TextView
+				android:id="@+id/kaisaiTitle2"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:gravity="left"
+				android:text="@string/search_kaisaitsuki"
+				android:textColor="@android:color/black"
+				android:textSize="17dp" />
+
+			<RelativeLayout
+				android:id="@+id/kaisaiRel2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<TextView
+					android:id="@+id/kaisaiTxt2"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_toLeftOf="@+id/kaisaiClearBtn2"
+					android:background="@drawable/mn_greenbutton"
+					android:gravity="center_vertical"
+					android:paddingLeft="20dp"
+					android:paddingRight="32dp"
+					android:singleLine="true"
+					android:textColor="@android:color/black"
+					android:textSize="16dp" />
+
+				<ImageView
+					android:id="@+id/kaisaiArrow2"
+					android:layout_width="15dp"
+					android:layout_height="15dp"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="15dp"
+					android:layout_toLeftOf="@+id/kaisaiClearBtn2"
+					android:scaleType="fitCenter"
+					android:src="@drawable/arr_down" />
+
+				<ImageButton
+					android:id="@+id/kaisaiClearBtn2"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_alignParentRight="true"
+					android:layout_centerInParent="true"
+					android:background="@android:color/transparent"
+					android:scaleType="fitCenter"
+					android:src="@drawable/mn_search_close"
+					android:tag="8" />
+			</RelativeLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/hakoGroup"
+			android:layout_width="match_parent"
+			android:layout_height="70dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginRight="20dp"
+			android:layout_below="@+id/kaisaiGroup2"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/hakoTitle"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:gravity="left"
+				android:text="@string/search_hako"
+				android:textColor="@android:color/black"
+				android:textSize="17dp" />
+
+			<RelativeLayout
+				android:id="@+id/hakoRel"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:focusableInTouchMode="true">
+
+				<EditText
+					android:id="@+id/hakoTxt"
+					android:layout_width="@dimen/_80sdp"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:layout_marginRight="5dp"
+					android:background="@drawable/mn_greenbutton"
+					android:gravity="center_vertical|right"
+					android:inputType="number"
+					android:maxLength="5"
+					android:paddingLeft="5dp"
+					android:paddingRight="20dp"
+					android:singleLine="true"
+					android:textColor="@android:color/black"
+					android:textSize="16dp" />
+
+				<TextView
+					android:id="@+id/hakoManaka"
+					android:layout_width="30dp"
+					android:layout_height="match_parent"
+					android:layout_toRightOf="@+id/hakoTxt"
+					android:gravity="center"
+					android:text="～"
+					android:textColor="@android:color/black"
+					android:textSize="@dimen/_15sdp" />
+
+				<EditText
+					android:id="@+id/hakoToTxt"
+					android:layout_width="@dimen/_80sdp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="5dp"
+					android:layout_toRightOf="@+id/hakoManaka"
+					android:background="@drawable/mn_greenbutton"
+					android:gravity="center_vertical|right"
+					android:inputType="number"
+					android:maxLength="5"
+					android:paddingLeft="5dp"
+					android:paddingRight="20dp"
+					android:singleLine="true"
+					android:textColor="@android:color/black"
+					android:textSize="16dp" />
+
+				<ImageButton
+					android:id="@+id/hakoClearBtn"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_centerInParent="true"
+					android:layout_marginLeft="5dp"
+					android:layout_toRightOf="@+id/hakoToTxt"
+					android:background="@android:color/transparent"
+					android:scaleType="fitCenter"
+					android:src="@drawable/mn_search_close"
+					android:tag="5" />
+			</RelativeLayout>
+		</LinearLayout>
+		<ListView
+			android:id="@+id/kaisaiLst2"
+			android:layout_width="match_parent"
+			android:layout_height="120dp"
+			android:layout_below="@+id/kaisaiGroup2"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginRight="42dp"
+			android:background="#ffffff"
+			android:divider="@null"
+			android:dividerHeight="0dp"
+			android:nestedScrollingEnabled="true"
+			android:visibility="gone" />
+	</RelativeLayout>
+	<ImageButton
+		android:id="@+id/btnBit"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@null"
+		android:contentDescription="@string/app_name"
+		android:scaleType="fitCenter"
+		android:padding="0dp"
+		android:src="@drawable/top_search_all_venue_button_style"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="10dp"
+		android:layout_marginRight="20dp"
+		android:layout_above="@+id/btnBit2"/>
+	<ImageButton
+		android:id="@+id/btnBit2"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@null"
+		android:contentDescription="@string/app_name"
+		android:scaleType="fitCenter"
+		android:padding="0dp"
+		android:src="@drawable/top_search_all_venue_button_style2"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="65dp"
+		android:layout_marginRight="20dp"
+		android:layout_alignParentBottom="true"/>
+	<include
+		layout="@layout/layout_main_menu"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@null"
+		android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:duplicateParentState="false"
+    android:noHistory="true"
+    android:orientation="vertical"
+	android:id="@+id/bgrLayout">
+
+    <RelativeLayout
+			android:layout_marginTop="0dp"
+			android:id="@+id/blockHeader"
+			android:layout_width="fill_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1.5"
+	>
+		<TextView
+			android:layout_marginTop="10dp"
+			android:layout_width="100dp"
+			android:layout_height="25dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="30dp"
+			android:id="@+id/versionTxt"
+			android:textSize="15dp"
+			android:textColor="@android:color/black"
+			android:text=""
+			android:gravity="end"/>
+
+		<ImageView
+			android:layout_width="300dp"
+			android:layout_height="200dp"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="0dp"
+			android:paddingLeft="40dp"
+			android:paddingRight="40dp"
+			android:scaleType="fitCenter"
+			android:src="@drawable/mn_l_logo" />
+
+
+
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blockBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="2"
+        android:fitsSystemWindows="false"
+        android:gravity="fill"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="5dp"
+		>
+    
+	    <RelativeLayout
+	        android:id="@+id/blockLoginId"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_centerInParent="false" >
+
+			<EditText
+	            android:id="@+id/txtLoginID"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/custom_edittext"
+	            android:cursorVisible="true"
+	            android:focusableInTouchMode="true"
+	            android:hint="@string/login_login_id"
+	            android:imeOptions="actionNext"
+	            android:inputType="textPersonName"
+	            android:maxLength="20"
+				android:ellipsize="end"
+	            android:paddingLeft="5dp"
+	            android:paddingRight="5dp"
+
+	            android:textColor="#000000"
+				android:text="100"
+				>
+	
+	            <requestFocus />
+	        </EditText>
+	    </RelativeLayout>
+	
+	    <RelativeLayout
+	        android:id="@+id/blockPassword"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginTop="5dp"
+	        android:layout_below="@+id/blockLoginId"
+	        >
+			<EditText
+	            android:id="@+id/txtPassword"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_centerHorizontal="true"
+	            android:paddingLeft="5dp"
+	            android:paddingRight="5dp"
+	            android:background="@drawable/custom_edittext"
+	            android:textColor="#000000"
+	            android:cursorVisible="true"
+	            android:focusableInTouchMode="true"
+	            android:imeOptions="actionGo"
+	            android:inputType="textPassword"
+	            android:maxLength="10"
+	            android:hint="@string/login_password"
+				android:ellipsize="end"
+				android:text="0123456789"
+				/>
+	
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/blockSavePassword"
+	        android:layout_below="@+id/blockPassword"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+
+			>
+	        <CheckBox
+	            android:id="@+id/chkBoxSavePassword"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_alignParentBottom="true"
+	            android:textColor="@android:color/black"
+
+				android:shadowColor="#00e64d"
+	            android:textSize="15dp"
+	            android:text="@string/login_save_password"
+				android:button="@drawable/login_custom_checkbox"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/blockLoginButton"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/blockSavePassword"
+			android:layout_marginTop="20dp">
+	
+	        <Button
+	            android:id="@+id/btnLogin"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:layout_centerHorizontal="true"
+	            android:background="@drawable/custom_login_button"
+	            android:contentDescription="@string/login_login"
+	            android:duplicateParentState="false"
+	            android:focusableInTouchMode="false"
+	            android:scaleType="fitCenter"
+	            android:text="@string/login_login_btn_text"
+	            android:textColor="@color/custom_white_color"
+				android:textSize="@dimen/login_text_size"
+				android:textAllCaps="false"
+                >
+	         </Button>
+	    </RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/toiawaseArea"
+			android:visibility="gone"
+			android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="47dp"
+			android:layout_below="@+id/blockLoginButton">
+			<Button
+				android:id="@+id/requestPassBtn"
+				android:layout_centerInParent="true"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:text="@string/request_pass_text"
+				android:textAllCaps="false"
+				android:textColor="@color/custom_black_color"
+				android:textSize="18dp"/>
+            <ImageView android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mn_tourl_"
+                android:layout_toRightOf="@+id/requestPassBtn"/>
+		</RelativeLayout>
+    </RelativeLayout>
+	<LinearLayout
+		android:id="@+id/blockBanners"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.7"
+		android:orientation="vertical"
+		android:visibility="invisible"
+		android:background="@android:color/transparent"
+		>
+
+		<ImageView android:layout_width="match_parent"
+			android:layout_height="90dp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/bannerTop"
+			android:scaleType="centerInside"
+			android:adjustViewBounds="true"
+			android:background="#ffffff"
+			/>
+
+	</LinearLayout>
+
+
+</LinearLayout>

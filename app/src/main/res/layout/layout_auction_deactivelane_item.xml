@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="94dp"
+    android:layout_height="66.5dp"
+    android:background="@drawable/auction_deactivelane_item_bg_a"
+     >
+    
+    <TextView
+        android:id="@+id/lblLaneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+        android:gravity="bottom"
+        android:text="@string/auction_lane"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/lblProductNo"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical|top"
+        android:text="12345"
+        android:textColor="#FFFF66"
+        android:textSize="18sp" />
+    
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:duplicateParentState="false"
+    android:noHistory="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#024AA6" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/common_back_button_style" />
+
+        <TextView
+            android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/register_absence_bid_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/top_text_header_size" />
+
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="0dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/custom_help_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/lblBoxNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockHeader"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/blockHeader"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/register_absence_bid_price"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/blockPrice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lblPrice"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/txtPrice"
+
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/custom_edittext"
+            android:cursorVisible="true"
+            android:digits="0123456789"
+            android:focusableInTouchMode="true"
+            android:gravity="right|center"
+            android:hint="@string/register_absence_bid_price_hint"
+            android:imeOptions="actionGo"
+            android:inputType="numberSigned"
+            android:maxLength="8"
+            android:paddingRight="8dp"
+            android:textColor="#000000"
+            android:textSize="@dimen/edittext_content_size">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/lblYen"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="false"
+
+            android:layout_alignParentLeft="true"
+            android:text="@string/register_absence_bid_money_yen"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/top_content_text_size"/>
+        <TextView
+            android:id="@+id/lblMoneyUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/register_absence_bid_money_unit"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blockStartPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockPrice"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/lblStartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/register_absence_bid_start_price"
+            android:textSize="@dimen/top_content_text_size"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/lblStartPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lblStartPrice"
+            android:textSize="@dimen/top_content_text_size"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblMessageInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/blockStartPrice"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/register_absence_bid_contents"
+        android:textColor="#024AA6"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/blockCommand"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lblMessageInfo"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="30dp" >
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mn_greenbutton"
+            android:contentDescription="@string/register_absence_bid_title"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:text="@string/absence_bid_btn_text"
+            android:textSize="@dimen/hiragino_button_text_size"
+            android:textColor="@color/mn_green"
+             >
+        </Button>
+
+        <Button
+            android:id="@+id/btnUnRegister"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mn_greenbutton"
+            android:contentDescription="@string/register_absence_bid_title"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:text="@string/cancel_text"
+            android:textSize="@dimen/hiragino_button_text_size"
+            android:textColor="@color/mn_green"
+            android:textAllCaps="false"
+            >
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>

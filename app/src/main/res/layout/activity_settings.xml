@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" 
+    android:noHistory="true">
+	<include
+		layout="@layout/layout_main_menu"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@null"
+		android:layout_alignParentBottom="true"/>
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+     	android:layout_width="match_parent"
+     	android:layout_height="40dp"
+     	android:background="#024AA6">
+     	
+		<ImageButton
+		    android:id="@+id/btnBack"
+		    android:layout_width="45dp"
+		    android:layout_height="25dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="0dp"
+		    android:background="@null"
+		    android:contentDescription="@string/app_name"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/common_back_button_style" />
+        
+        
+       <TextView 
+           android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/top_text_header_size"
+            android:text="@string/settings_screen_title"/>
+        
+    </RelativeLayout>
+
+	<Button
+		android:id="@+id/btnShowAgreement"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/blockHeader"
+		android:layout_marginTop="70dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/use_agreement"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+
+
+	<Button
+		android:visibility="visible"
+		android:id="@+id/btnShowLogSetting"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/btnShowAgreement"
+		android:layout_marginTop="20dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/setup_logBtn"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+
+	<Button
+		android:visibility="visible"
+		android:id="@+id/btnPushSetting"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/btnShowLogSetting"
+		android:layout_marginTop="20dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/push_setting"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+
+	<Button
+		android:visibility="visible"
+		android:id="@+id/btnLanguageSetting"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/btnPushSetting"
+		android:layout_marginTop="20dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/language_setting_title"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+	<Button
+		android:visibility="visible"
+		android:id="@+id/btnAucSetting"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/btnLanguageSetting"
+		android:layout_marginTop="20dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/auc_setting_title"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+	<Button
+		android:visibility="visible"
+		android:id="@+id/btnNyusatsuSetting"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_below="@+id/btnAucSetting"
+		android:layout_marginTop="20dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/auction_title"
+		android:text="@string/push_nyusatsu_setting_title"
+		android:textColor="@color/custom_black_color"
+		android:textSize="17sp"
+		android:background="@drawable/mn_greenbutton"
+		android:textAllCaps="false"/>
+
+	<ImageButton
+		android:id="@+id/btnBit"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@null"
+		android:contentDescription="@string/app_name"
+		android:scaleType="fitCenter"
+		android:padding="0dp"
+		android:src="@drawable/top_search_all_venue_button_style"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="10dp"
+		android:layout_marginRight="20dp"
+		android:layout_above="@+id/btnBit2"
+		android:translationZ="5dp"
+		/>
+	<ImageButton
+		android:id="@+id/btnBit2"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@null"
+		android:contentDescription="@string/app_name"
+		android:scaleType="fitCenter"
+		android:padding="0dp"
+		android:src="@drawable/top_search_all_venue_button_style2"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="120dp"
+		android:layout_marginRight="20dp"
+		android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

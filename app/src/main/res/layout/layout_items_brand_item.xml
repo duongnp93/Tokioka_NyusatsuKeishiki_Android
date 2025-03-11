@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mn_list_item"
+	android:padding="1dp"
+
+	>
+<!--	android:descendantFocusability="blocksDescendants"-->
+	<TextView
+        android:id="@+id/lblBoxNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/items_info_textview_height"
+        android:layout_toRightOf="@+id/imvImage1"
+
+        android:gravity="center_vertical|center"
+
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+    <TextView
+           android:id="@+id/lblResultName"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/items_info_textview_height"
+	        android:layout_below="@+id/lblState"
+			android:layout_toRightOf="@+id/imvImage1"
+	        android:gravity="center_vertical|center"
+	        android:paddingLeft="3dp"
+	        android:paddingRight="3dp"
+	        android:textColor="#000000"
+			android:textSize="15dp"
+           android:lines="1"
+           android:maxLines="1"
+		android:textIsSelectable="true"/>
+
+
+    <TextView
+        android:id="@+id/lblState"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/items_info_textview_height"
+        android:layout_toRightOf="@+id/imvImage1"
+
+        android:layout_below="@+id/lblItemName"
+        android:ellipsize="end"
+        android:gravity="center_vertical|center"
+
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/lblLastPrice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/items_info_textview_height"
+        android:layout_toRightOf="@+id/imvImage1"
+		android:autoSizeTextType="uniform"
+		android:autoSizeMinTextSize="10sp"
+		android:autoSizeMaxTextSize="15sp"
+        android:ellipsize="end"
+        android:gravity="center_vertical|center"
+        android:lines="1"
+        android:maxLines="1"
+		android:paddingTop="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="#000000"
+        android:textSize="15dp"
+		android:layout_below="@+id/lblResultName"/>
+
+	<tokiokaability.auction.view.RoundRectCornerImageView
+		android:id="@+id/imvImage1"
+		android:layout_width="@dimen/list_img_width"
+		android:layout_height="180dp"
+		android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/lblItemName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/items_info_textview_height"
+        android:layout_below="@+id/lblBoxNo"
+        android:layout_toRightOf="@+id/imvImage1"
+        android:ellipsize="end"
+        android:gravity="center_vertical|center"
+        android:maxLines="1"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="#000000"
+        android:textSize="15dp"
+		android:lineSpacingExtra="5dp"/>
+	<Button
+		android:id="@+id/correctionBtn"
+		android:layout_width="93dp"
+		android:layout_height="25dp"
+		android:background="@drawable/btn_correction_layout"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="15dp"
+		android:scaleType="fitCenter"
+		android:focusable="false"
+		android:text="@string/correction_btn"
+		android:textColor="@color/custom_white_color"
+		android:visibility="gone"
+		android:textAllCaps="false"
+		/>
+	<ImageButton android:id="@+id/okiniriBtn"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:background="@android:color/transparent"
+		android:src="@drawable/okiniri"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="135dp"
+		android:scaleType="fitCenter"
+		android:focusable="false"
+		/>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_toRightOf="@id/okiniriBtn"
+		android:layout_toLeftOf="@id/lblItemName"
+		android:layout_marginTop="135dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:id="@+id/txtFuzai_l"
+		android:background="#4D000000"
+		android:autoSizeTextType="uniform"
+		android:autoSizeMinTextSize="2sp"
+		android:autoSizeMaxTextSize="15sp"
+
+		android:textColor="#ffffff"
+		android:gravity="center_vertical|right"
+		/>
+	<TextView
+		android:layout_width="80dp"
+		android:layout_height="@dimen/_24sdp"
+		android:layout_toLeftOf="@id/lblItemName"
+		android:layout_marginTop="135dp"
+		android:id="@+id/lblStatus"
+		android:background="@null"
+		android:autoSizeTextType="uniform"
+		android:autoSizeMinTextSize="2sp"
+		android:autoSizeMaxTextSize="15sp"
+		android:textColor="#ffffff"
+		android:gravity="center"
+		android:layout_marginRight="10dp"
+		/>
+	<ImageButton
+		android:id="@+id/btnTradeStatus"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/_28sdp"
+		android:background="@null"
+		android:src="@drawable/item_koshoari_button_style"
+		android:paddingTop="1dp"
+		android:paddingBottom="1dp"
+		android:scaleType="fitCenter"
+		android:layout_marginTop="135dp"
+		android:layout_toRightOf="@+id/okiniriBtn"
+		android:layout_toLeftOf="@id/lblItemName"
+		android:layout_marginLeft="70dp"
+		android:layout_marginRight="10dp"/>
+</RelativeLayout>

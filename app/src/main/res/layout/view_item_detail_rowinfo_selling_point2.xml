@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:background="@android:color/white"
+    >
+    <tokiokaability.auction.commons.HiraginoW3TextView
+        android:id="@+id/lblLabel"
+        android:layout_width="@dimen/item_detail_label_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/item_detail_table_border"
+        android:background="#f2f2f2"
+        android:gravity="center_vertical|top"
+        android:paddingLeft="@dimen/item_detail_label_padding"
+        android:paddingTop="5dp"
+        android:text="XXXXX"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_detail_lable_size" />
+
+    <tokiokaability.auction.commons.HiraginoW3TextView
+        android:id="@+id/lblValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/lblLabel"
+        android:layout_marginRight="1dp"
+        android:background="@android:color/white"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="5"
+        android:maxLines="5"
+        android:paddingLeft="@dimen/item_detail_label_padding"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_detail_text_size" />
+</LinearLayout>

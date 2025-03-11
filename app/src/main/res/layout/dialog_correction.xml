@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutParent"
+    android:layout_gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#fff">
+
+    <RelativeLayout android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#024AA6">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lblCorrectionTitle"
+            android:text="@string/correction_title"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:gravity="center|left"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/textArea"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@+id/blockHeader"
+        android:background="#fff"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/lblCorrectionBoxTitle"
+            android:text="@string/correction_box_title"
+            android:textColor="#000"
+            android:textSize="@dimen/_14sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/lblCorrectionSellNo"
+            android:text="101-01"
+            android:textColor="#000"
+            android:textSize="@dimen/_14sdp"
+            android:layout_toRightOf="@+id/lblCorrectionBoxTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/lblCorrectionContentTitle"
+            android:text="@string/correction_title"
+            android:textColor="#000"
+            android:textSize="@dimen/_14sdp"
+            android:layout_below="@+id/lblCorrectionBoxTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/lblCorrectionContent"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/lblCorrectionContentTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_border_textbox"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:text="@string/correction_title"
+            android:textColor="#000"
+            android:textSize="@dimen/_13sdp" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_green_border_button"
+        android:focusable="false"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/auction_title"
+        android:textColor="@color/custom_black_color"
+        android:text="@string/close"
+        android:textSize="@dimen/hiragino_button_text_size"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        />
+
+</RelativeLayout>

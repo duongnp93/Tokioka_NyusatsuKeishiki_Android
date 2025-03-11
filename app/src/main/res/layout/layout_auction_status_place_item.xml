@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#333333"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:weightSum="1.0">
+    
+    <RelativeLayout
+        android:id="@+id/place_cell_block_header"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:background="@drawable/place_cell_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+            <TextView
+                android:id="@+id/lblPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:textColor="#7AA7DE"
+                android:textSize="20sp" />
+            
+            <TextView
+                android:id="@+id/lblTimeNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="@string/place_today_holding"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+            
+    </RelativeLayout>
+    
+	<RelativeLayout
+	    android:id="@+id/place_cell_block_campaign"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_marginTop="4dp" >
+            
+	        <TextView
+	            android:id="@+id/lblCampaign"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="7dp"
+	            android:text="@string/place_campaign"
+	            android:textColor="#FFFFFF"
+	            android:textSize="20sp" />
+	    
+	       	<ImageButton
+	       	    android:id="@+id/btnPlaceSelect"
+	       	    android:layout_width="82dp"
+	       	    android:layout_height="36dp"
+	       	    android:layout_alignParentRight="true"
+	       	    android:layout_centerVertical="true"
+	       	    android:contentDescription="@string/auction_status_screen_title"
+	       	    android:focusable="false"
+	       	    android:scaleType="fitCenter"
+	       	    android:background="@null"
+	       	    android:src="@drawable/auction_status_select_button_style" >
+
+	    	</ImageButton> 
+	        
+
+	</RelativeLayout>
+    
+	<ListView
+           	android:id="@+id/lstLanes"
+           	android:layout_width="match_parent"
+    		android:layout_height="0dp"
+			android:layout_weight="1.0"
+			android:layout_marginTop="4dp"
+           	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp">
+	</ListView>
+	
+</LinearLayout>

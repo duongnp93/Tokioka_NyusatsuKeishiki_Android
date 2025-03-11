@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#333333"
+    android:noHistory="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48.5dp"
+        android:background="@drawable/common_bar_bg" >
+
+		<ImageButton
+		    android:id="@+id/btnBack"
+		    android:layout_width="56dp"
+		    android:layout_height="36dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@null"
+		    android:contentDescription="@string/app_name"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/common_back_button_style" />
+            android:src="@drawable/common_logout_button_style" />
+
+        <TextView
+            android:id="@+id/lblScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/manufacturer_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <tokiokaability.auction.view.PlacesView
+            android:id="@+id/blockPlace"
+            android:layout_below="@+id/blockHeader"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+    </tokiokaability.auction.view.PlacesView>
+
+    <ListView
+        android:id="@+id/lvMakerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blockPlace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="23dp"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/list_selector"
+        android:dividerHeight="0dp"
+        android:padding="0dp" >
+    </ListView>
+
+    <include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_main_menu"
+        android:background="@null" />
+
+</RelativeLayout>
