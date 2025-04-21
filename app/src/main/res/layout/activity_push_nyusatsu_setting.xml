@@ -5,12 +5,7 @@
     android:background="#f5f5f5"
     android:orientation="vertical"
     android:id="@+id/mainLayout">
-    <include
-        layout="@layout/layout_main_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:layout_alignParentBottom="true"/>
+
     <RelativeLayout
         android:id="@+id/blockHeader"
         android:layout_width="match_parent"
@@ -97,12 +92,11 @@
             android:layout_marginLeft="24dp"
             android:background="@drawable/custom_edittext"
             android:cursorVisible="true"
-            android:digits="0123456789"
             android:focusableInTouchMode="true"
             android:gravity="right|center"
             android:hint="@string/register_absence_bid_price_hint"
             android:imeOptions="actionGo"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:paddingRight="8dp"
             android:textColor="#000000"
             android:textSize="@dimen/edittext_content_size">
@@ -137,16 +131,29 @@
             android:layout_height="40dp"
             android:id="@+id/btnOK"
             android:text="@string/push_nyusatsu_setting_ok"
-            android:textSize="18sp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            />
+        <RadioButton android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/btnOkiniri"
+            android:text="@string/push_nyusatsu_setting_ok2"
+            android:textSize="16sp"
             android:textColor="@android:color/black"
             />
         <RadioButton android:layout_width="match_parent"
             android:layout_height="40dp"
             android:id="@+id/btnDeny"
             android:text="@string/push_nyusatsu_setting_deny"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="@android:color/black"
             />
+
+        <include
+            layout="@layout/layout_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" />
     </RadioGroup>
     <ImageButton
         android:id="@+id/btnBit"

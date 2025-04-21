@@ -50,7 +50,8 @@
 
     <string name="push_nyusatsu_setting_title">入札通知設定</string>
     <string name="push_nyusatsu_setting_Description">入札の情報についてプッシュ通知・メールを送ります。</string>
-    <string name="push_nyusatsu_setting_ok">通知を受け取る</string>
+    <string name="push_nyusatsu_setting_ok">すべての商品の通知を受け取る</string>
+    <string name="push_nyusatsu_setting_ok2">お気に入り登録した商品のみの通知を受け取る</string>
     <string name="push_nyusatsu_setting_deny">通知を受け取らない</string>
     <string name="push_nyusatsu_setting_chk1">プッシュ通知</string>
     <string name="push_nyusatsu_setting_chk2">メール</string>

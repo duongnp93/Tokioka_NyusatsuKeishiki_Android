@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="tokiokaability.auction"
+    package="tokiokaability.auction24"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -29,7 +29,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 <!--    <permission android:name="android.permission.FLASHLIGHT" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="normal" />-->
     <application
-        android:name="tokiokaability.auction.RealLuceAuctionApplication"
+        android:name="tokiokaability.auction24.RealLuceAuctionApplication"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"
         android:label="@string/app_name"
@@ -45,7 +45,7 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/notification_channel" />
         <activity
-            android:name="tokiokaability.auction.activities.TopSearchActivity"
+            android:name="tokiokaability.auction24.activities.TopSearchActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.PlaceSelectionActivity"
+            android:name="tokiokaability.auction24.activities.PlaceSelectionActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -69,7 +69,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.SearchBoxNoActivity"
+            android:name="tokiokaability.auction24.activities.SearchBoxNoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.AgreementActivity"
+            android:name="tokiokaability.auction24.activities.AgreementActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -93,7 +93,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.SearchFreewordActivity"
+            android:name="tokiokaability.auction24.activities.SearchFreewordActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -105,7 +105,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.SearchCornerActivity"
+            android:name="tokiokaability.auction24.activities.SearchCornerActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -117,7 +117,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.SettingsActivity"
+            android:name="tokiokaability.auction24.activities.SettingsActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -129,7 +129,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.AuctionStatusActivity"
+            android:name="tokiokaability.auction24.activities.AuctionStatusActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -142,7 +142,7 @@
         </activity>
         
         <activity
-            android:name="tokiokaability.auction.activities.SplashActivity"
+            android:name="tokiokaability.auction24.activities.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="true">
@@ -153,7 +153,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.LoginActivity"
+            android:name="tokiokaability.auction24.activities.LoginActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -166,7 +166,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.PlacesActivity"
+            android:name="tokiokaability.auction24.activities.PlacesActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -178,7 +178,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.AuctionActivity"
+            android:name="tokiokaability.auction24.activities.AuctionActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -190,7 +190,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.ItemsActivity"
+            android:name="tokiokaability.auction24.activities.ItemsActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -203,7 +203,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.ItemDetailActivity"
+            android:name="tokiokaability.auction24.activities.ItemDetailActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -215,7 +215,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.PreviewRequestActivity"
+            android:name="tokiokaability.auction24.activities.PreviewRequestActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -227,7 +227,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.RegisterAbsenceBidActivity"
+            android:name="tokiokaability.auction24.activities.RegisterAbsenceBidActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -239,7 +239,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.ContactActivity"
+            android:name="tokiokaability.auction24.activities.ContactActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -251,7 +251,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.ManufacturersActivity"
+            android:name="tokiokaability.auction24.activities.ManufacturersActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -262,19 +262,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.ItemNameActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:exported="false"
-            tools:ignore="AppLinkUrlError">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="tokiokaability.auction.activities.SendLogActivity"
+            android:name="tokiokaability.auction24.activities.ItemNameActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -286,7 +274,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.PhoneConfirmActivity"
+            android:name="tokiokaability.auction24.activities.SendLogActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -297,9 +285,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="tokiokaability.auction.activities.ChangePhoneActivity"
+            android:name="tokiokaability.auction24.activities.PhoneConfirmActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -312,7 +299,7 @@
         </activity>
 
         <activity
-            android:name="tokiokaability.auction.activities.AuthenticalActivity"
+            android:name="tokiokaability.auction24.activities.ChangePhoneActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -325,7 +312,20 @@
         </activity>
 
         <activity
-            android:name="tokiokaability.auction.activities.ChaneAuthenticalActivity"
+            android:name="tokiokaability.auction24.activities.AuthenticalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="tokiokaability.auction24.activities.ChaneAuthenticalActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -337,7 +337,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.PushSettingActivity"
+            android:name="tokiokaability.auction24.activities.PushSettingActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -349,7 +349,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.NyusatsuPushSettingActivity"
+            android:name="tokiokaability.auction24.activities.NyusatsuPushSettingActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -361,7 +361,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.LanguageSettingActivity"
+            android:name="tokiokaability.auction24.activities.LanguageSettingActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -373,7 +373,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.AucSettingActivity"
+            android:name="tokiokaability.auction24.activities.AucSettingActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -385,7 +385,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.WebBidActivity"
+            android:name="tokiokaability.auction24.activities.WebBidActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -397,7 +397,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.RegisterNegotiationActivity"
+            android:name="tokiokaability.auction24.activities.RegisterNegotiationActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -409,7 +409,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tokiokaability.auction.activities.MyPageActivity"
+            android:name="tokiokaability.auction24.activities.MyPageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
@@ -436,7 +436,7 @@
             <!--</intent-filter>-->
         <!--</service>-->
         <service
-            android:name="tokiokaability.auction.FCMIntentService"
+            android:name="tokiokaability.auction24.FCMIntentService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>

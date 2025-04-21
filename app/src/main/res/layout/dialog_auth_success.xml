@@ -16,7 +16,7 @@
             android:layout_width="85dp"
             android:layout_height="85dp"
             />
-        <tokiokaability.auction.view.HiraginoW6TextView
+        <tokiokaability.auction24.view.HiraginoW6TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"

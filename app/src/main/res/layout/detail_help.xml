@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <tokiokaability.auction.view.HiraginoW6TextView
+    <tokiokaability.auction24.view.HiraginoW6TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -11,7 +11,7 @@
         android:textSize="@dimen/top_text_header_size"
         android:textColor="#006666"
         android:text="@string/detail_help_title"/>
-    <tokiokaability.auction.commons.HiraginoW3TextView
+    <tokiokaability.auction24.commons.HiraginoW3TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

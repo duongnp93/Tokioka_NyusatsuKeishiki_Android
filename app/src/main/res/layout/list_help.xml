@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
-    <tokiokaability.auction.view.HiraginoW6TextView
+    <tokiokaability.auction24.view.HiraginoW6TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -11,7 +11,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:textSize="@dimen/top_text_header_size"
         android:textColor="#006666"/>
-    <tokiokaability.auction.commons.HiraginoW3TextView
+    <tokiokaability.auction24.commons.HiraginoW3TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -34,7 +34,7 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:orientation="horizontal">
-            <tokiokaability.auction.view.HiraginoW6TextView
+            <tokiokaability.auction24.view.HiraginoW6TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -45,7 +45,7 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/top_content_text_size"/>
-            <tokiokaability.auction.view.HiraginoW6TextView
+            <tokiokaability.auction24.view.HiraginoW6TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -64,7 +64,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
-            <tokiokaability.auction.view.HiraginoW6TextView
+            <tokiokaability.auction24.view.HiraginoW6TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -76,7 +76,7 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/top_content_text_size"/>
-            <tokiokaability.auction.view.HiraginoW6TextView
+            <tokiokaability.auction24.view.HiraginoW6TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

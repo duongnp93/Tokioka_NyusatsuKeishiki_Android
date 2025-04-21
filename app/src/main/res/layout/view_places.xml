@@ -31,7 +31,7 @@
                 android:src="@drawable/top_search_next_button_style" />        
         
 
-        <tokiokaability.auction.view.ContainerScroll
+        <tokiokaability.auction24.view.ContainerScroll
             android:id="@+id/scroller"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
@@ -57,7 +57,7 @@
 			</LinearLayout>
 
 
-        </tokiokaability.auction.view.ContainerScroll>
+        </tokiokaability.auction24.view.ContainerScroll>
         
         <View
             android:layout_width="10dp"

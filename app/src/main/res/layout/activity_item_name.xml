@@ -34,7 +34,7 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <tokiokaability.auction.view.PlacesView
+    <tokiokaability.auction24.view.PlacesView
             android:id="@+id/blockPlace"
             android:layout_below="@+id/blockHeader"
             android:layout_width="match_parent"
@@ -43,7 +43,7 @@
             android:layout_marginTop="19dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp">
-    </tokiokaability.auction.view.PlacesView>
+    </tokiokaability.auction24.view.PlacesView>
 
     <TextView
         android:id="@+id/lblMakerName"

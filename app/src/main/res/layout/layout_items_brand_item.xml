@@ -74,7 +74,7 @@
         android:textSize="15dp"
 		android:layout_below="@+id/lblResultName"/>
 
-	<tokiokaability.auction.view.RoundRectCornerImageView
+	<tokiokaability.auction24.view.RoundRectCornerImageView
 		android:id="@+id/imvImage1"
 		android:layout_width="@dimen/list_img_width"
 		android:layout_height="180dp"

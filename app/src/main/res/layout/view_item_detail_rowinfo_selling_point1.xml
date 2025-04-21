@@ -5,7 +5,7 @@
     android:minHeight="60dp"
     android:background="@android:color/white"
     >
-    <tokiokaability.auction.commons.HiraginoW3TextView
+    <tokiokaability.auction24.commons.HiraginoW3TextView
         android:id="@+id/lblLabel"
         android:layout_width="@dimen/item_detail_label_width"
         android:layout_height="match_parent"
@@ -29,7 +29,7 @@
         android:background="@null"
         android:orientation="vertical"
     >
-        <tokiokaability.auction.commons.HiraginoW3TextView
+        <tokiokaability.auction24.commons.HiraginoW3TextView
             android:id="@+id/lblValue1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

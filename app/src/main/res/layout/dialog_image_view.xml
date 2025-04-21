@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
 	android:id="@+id/layoutParent">
     
-	<tokiokaability.auction.view.PinchImageView
+	<tokiokaability.auction24.view.PinchImageView
 	    android:id="@+id/imvImage"
 	    android:layout_width="match_parent"
 	    android:layout_height="360dp"
