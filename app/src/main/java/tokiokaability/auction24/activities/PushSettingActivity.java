@@ -87,17 +87,15 @@ public class PushSettingActivity extends BaseActivity {
         public void onClick(View v) {
             boolean checked = ((RadioButton)v).isChecked();
             String pushFlg = "";
-            switch (v.getId()){
-                case R.id.btnOK:
-                    if(checked){
-                        pushFlg = "1";
-                    }
-                    break;
-                case R.id.btnDeny:
-                    if(checked){
-                        pushFlg = "0";
-                    }
-                    break;
+            int id = v.getId();
+            if (id == R.id.btnOK) {
+                if (checked) {
+                    pushFlg = "1";
+                }
+            } else if (id == R.id.btnDeny) {
+                if (checked) {
+                    pushFlg = "0";
+                }
             }
 
             HTTPService srv = new HTTPService(new HTTPServiceCallback() {

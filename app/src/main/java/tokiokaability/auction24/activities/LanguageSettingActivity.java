@@ -97,21 +97,19 @@ public class LanguageSettingActivity extends BaseActivity {
             String lanFlg = "";
             SharedPreferences settings = getSharedPreferences(RealLuceAuctionApplication.SETTINGS, MODE_PRIVATE);
             SharedPreferences.Editor editor = settings.edit();
-            switch (v.getId()){
-                case R.id.btnOK:
-                    if(checked){
-                        lanFlg = "0";
-                        editor.putString(RealLuceAuctionApplication.SETTINGS_VIEW_LANGUAGE, "ja");
-                        setLocale("ja");
-                    }
-                    break;
-                case R.id.btnDeny:
-                    if(checked){
-                        lanFlg = "1";
-                        editor.putString(RealLuceAuctionApplication.SETTINGS_VIEW_LANGUAGE, "en");
-                        setLocale("en");
-                    }
-                    break;
+            int id = v.getId();
+            if (id == R.id.btnOK) {
+                if (checked) {
+                    lanFlg = "0";
+                    editor.putString(RealLuceAuctionApplication.SETTINGS_VIEW_LANGUAGE, "ja");
+                    setLocale("ja");
+                }
+            } else if (id == R.id.btnDeny) {
+                if (checked) {
+                    lanFlg = "1";
+                    editor.putString(RealLuceAuctionApplication.SETTINGS_VIEW_LANGUAGE, "en");
+                    setLocale("en");
+                }
             }
             editor.commit();
             reloadText();

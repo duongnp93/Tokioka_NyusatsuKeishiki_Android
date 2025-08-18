@@ -280,43 +280,40 @@ public class NyusatsuPushSettingActivity extends BaseActivity {
         public void onClick(View v) {
             boolean checked = ((RadioButton)v).isChecked();
             String pushFlg = "";
-            switch (v.getId()){
-                case R.id.btnOK:
-                    if(checked){
-                        if(chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "3";
-                        else if(!chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "2";
-                        else if(chkPush.isChecked() && !chkMail.isChecked())
-                            pushFlg = "1";
-                        else
-                            pushFlg = "0";
-                    }
-                    break;
-                case R.id.btnOkiniri:
-                    if(checked){
-                        if(chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "6";
-                        else if(!chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "5";
-                        else if(chkPush.isChecked() && !chkMail.isChecked())
-                            pushFlg = "4";
-                        else
-                            pushFlg = "7";
-                    }
-                    break;
-                case R.id.btnDeny:
-                    if(checked){
-                        if(chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "11";
-                        else if(!chkPush.isChecked() && chkMail.isChecked())
-                            pushFlg = "9";
-                        else if(chkPush.isChecked() && !chkMail.isChecked())
-                            pushFlg = "10";
-                        else
-                            pushFlg = "8";
-                    }
-                    break;
+            int id = v.getId();
+            if (id == R.id.btnOK) {
+                if (checked) {
+                    if (chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "3";
+                    else if (!chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "2";
+                    else if (chkPush.isChecked() && !chkMail.isChecked())
+                        pushFlg = "1";
+                    else
+                        pushFlg = "0";
+                }
+            } else if (id == R.id.btnOkiniri) {
+                if (checked) {
+                    if (chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "6";
+                    else if (!chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "5";
+                    else if (chkPush.isChecked() && !chkMail.isChecked())
+                        pushFlg = "4";
+                    else
+                        pushFlg = "7";
+                }
+            } else if (id == R.id.btnDeny) {
+                if (checked) {
+                    if (chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "11";
+                    else if (!chkPush.isChecked() && chkMail.isChecked())
+                        pushFlg = "9";
+                    else if (chkPush.isChecked() && !chkMail.isChecked())
+                        pushFlg = "10";
+                    else
+                        pushFlg = "8";
+                }
             }
 
             HTTPService srv = new HTTPService(new HTTPServiceCallback() {

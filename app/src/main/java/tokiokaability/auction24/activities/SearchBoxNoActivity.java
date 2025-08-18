@@ -896,6 +896,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 			setActivityParam("BoxNo","");
 			setActivityParam("BoxNoTo","");
 			setActivityParam("SessionList",getSessionNo());
+			setActivityParam("SessionHosekiList",getSessionNo());
 			hakoTxt.setText("");
 			hakoToTxt.setText("");
 			kaisaiTxt2.setText("");
@@ -912,6 +913,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 			setActivityParam("BoxNo",hakoTxt.getText().toString());
 			setActivityParam("BoxNoTo",hakoToTxt.getText().toString());
 			setActivityParam("SessionList",getSessionNo2());
+			setActivityParam("SessionHosekiList",getSessionNo2());
 			setKaisaiList();
 			kaisaiTxt.setText("");
 			freeTxt.setText("");
@@ -923,7 +925,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 		setActivityParam("KakoFlag",kakoFlag);
 		setTransitAnimationType(TRANSIT_ANIMATION_FADEINOUT);
 
-		if(!kakoFlag.equals("1") && (catSend.equals("'宝石'") || (hakoTxt.getText().length() > 0 && Integer.valueOf(hakoTxt.getText().toString()) >= 500))){
+		if(catSend.equals("'宝石'") || (hakoTxt.getText().length() > 0 && Integer.valueOf(hakoTxt.getText().toString()) >= 500)){
 			showActivity(WebBidActivity.class);
 		}
 		else{

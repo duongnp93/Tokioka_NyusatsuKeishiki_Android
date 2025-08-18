@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
 import android.webkit.ValueCallback;
@@ -14,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.apache.commons.codec.binary.Hex;
+
+import java.util.List;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -27,16 +30,15 @@ public class WebBidActivity  extends BaseActivity {
     String nyusatsu_url = "";
     TextView lblScreenTitle;
     int searchMode;
-    String boxNo,boxNoTo,freeWord,brandList,subCatList,rankList;
+    String boxNo,boxNoTo,freeWord,brandList,subCatList,rankList,sessionList,kakoFlg;
     private ImageButton btnBack;
     public AssetManager am ;
     public Typeface yGR,yGB;
-    ImageButton btnBid,btnBid2;
 
     @Override
     protected void initialization() {
-        super.initialization();
         setContentView(R.layout.web_auction);
+        super.initialization();
         webView = findViewById(R.id.webViewArea);
         this.btnBack = findViewById(R.id.btnBack);
         lblScreenTitle = findViewById(R.id.lblScreenTitle);
@@ -48,9 +50,19 @@ public class WebBidActivity  extends BaseActivity {
         subCatList = (String) getActivityParam("SubCatList","");
         brandList = (String) getActivityParam("BrandList","");
         rankList = (String) getActivityParam("RankList","");
+        sessionList = (String) getActivityParam("SessionHosekiList","");
+        kakoFlg = (String) getActivityParam("KakoFlag","");
         setScreenTitle();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
+
+        //api 35 zoom config
+        webView.getSettings().setSupportZoom(true); // Cho phép zoom
+        webView.getSettings().setBuiltInZoomControls(true); // Bật pinch-to-zoom
+        webView.getSettings().setDisplayZoomControls(false); // Ẩn nút zoom UI
+        webView.getSettings().setUseWideViewPort(true); // Cho phép layout rộng để zoom
+        webView.getSettings().setLoadWithOverviewMode(true); // Load theo tỉ lệ phù hợp
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             webView.getSettings().setMediaPlaybackRequiresUserGesture(false);
         }
@@ -58,10 +70,18 @@ public class WebBidActivity  extends BaseActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(generateUrl());
         btnBack.setOnClickListener(btnBackClick);
-        btnBid = findViewById(R.id.btnBit);
-        btnBid2 = findViewById(R.id.btnBit2);
-        btnBid.setTag("1");
-        btnBid2.setTag("2");
+        btnBid.setVisibility(View.GONE);
+        btnBid.setEnabled(true);
+        btnBid2.setVisibility(View.GONE);
+        btnBid2.setEnabled(true);
+        if(RealLuceAuctionApplication.allPlaces.get(0).getRealFlag().equals("1")){
+            btnBid.setVisibility(View.VISIBLE);
+            btnBid2.setVisibility(View.VISIBLE);
+        }
+        else{
+            btnBid.setVisibility(View.GONE);
+            btnBid2.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -83,23 +103,24 @@ public class WebBidActivity  extends BaseActivity {
         yGB = Typeface.createFromAsset(am,"fonts/YUGOTHB.TTC");
         yGR = Typeface.createFromAsset(am,"fonts/YUGOTHR.TTC");
         String title = null;
-        if (searchMode == 1) {
-            title = this.getString(R.string.items_info_result_list_title);
-        } else if (searchMode == 2) {
-            title = this.getString(R.string.items_info_product_list_title);
-        } else if (searchMode == 3) {
-
-            title = this.getString(R.string.items_info_successfully_bit_title);
-        } else if (searchMode == 4) {
-            title = this.getString(R.string.items_info_bit_list_title);
-        } else if (searchMode == 5) {
-            title = this.getString(R.string.items_info_mylist_list_title);
-        } else if (searchMode == 6) {
-            title = this.getString(R.string.items_info_mylist_notification_title);
-        } else if (searchMode == 7) {
-            title = this.getString(R.string.items_info_mylist_rate_free_word_title);
-            lblScreenTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        }
+        title = this.getString(R.string.items_info_result_list_title);
+//        if (searchMode == 1) {
+//            title = this.getString(R.string.items_info_result_list_title);
+//        } else if (searchMode == 2) {
+//            title = this.getString(R.string.items_info_product_list_title);
+//        } else if (searchMode == 3) {
+//
+//            title = this.getString(R.string.items_info_successfully_bit_title);
+//        } else if (searchMode == 4) {
+//            title = this.getString(R.string.items_info_bit_list_title);
+//        } else if (searchMode == 5) {
+//            title = this.getString(R.string.items_info_mylist_list_title);
+//        } else if (searchMode == 6) {
+//            title = this.getString(R.string.items_info_mylist_notification_title);
+//        } else if (searchMode == 7) {
+//            title = this.getString(R.string.items_info_mylist_rate_free_word_title);
+//            lblScreenTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+//        }
 
         lblScreenTitle.setText(title);
         if(Build.VERSION.SDK_INT!= Build.VERSION_CODES.KITKAT)
@@ -111,7 +132,11 @@ public class WebBidActivity  extends BaseActivity {
         SharedPreferences settings = getSharedPreferences(RealLuceAuctionApplication.SETTINGS, MODE_PRIVATE);
         String langFlg = settings.getString(RealLuceAuctionApplication.SETTINGS_VIEW_LANGUAGE,"").equals("en")?"1":"0";
         String encodedParam = encode("TokiokaAbility",hmacData);
-        result = String.format("%s?phoneFlg=1&loginId=%s&searchMode=%d&cornerId=5&Brand=%s&MedCat=%s&Rank=%s&FreeWord=%s&FromBox=%s&ToBox=%s"
+        List<String> kaisaiNoLst = RealLuceAuctionApplication.systemInfo.getSessionList();
+        String sList = TextUtils.join(",",kaisaiNoLst.subList(1,kaisaiNoLst.size()));
+        String pList = sessionList.replace("'","");
+        String sesParam = sList.equals(pList)?"":pList;
+        result = String.format("%s?phoneFlg=1&loginId=%s&searchMode=%d&cornerId=5&Brand=%s&MedCat=%s&Rank=%s&FreeWord=%s&FromBox=%s&ToBox=%s&KakoFlg=%s&SessionNo=%s"
                 ,nyusatsu_url,RealLuceAuctionApplication.loginID
                 ,searchMode
                 ,brandList.replace("'","").replace("  "," ")
@@ -120,6 +145,8 @@ public class WebBidActivity  extends BaseActivity {
                 ,freeWord.replace("'","")
                 ,boxNo.replace("'","")
                 ,boxNoTo.replace("'","")
+                ,kakoFlg
+                ,sesParam
                 );
         return result;
     }

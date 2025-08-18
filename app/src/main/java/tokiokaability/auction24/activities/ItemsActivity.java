@@ -493,6 +493,7 @@ public class ItemsActivity extends BaseActivity {
 			if(position == 1){
 				cornerTxt.setText("宝石");
 				lstCorner.setVisibility(View.GONE);
+				setActivityParam("SessionHosekiList",CurrentSessionNo);
 				showActivity(WebBidActivity.class);
 			}
 		}
@@ -504,6 +505,7 @@ public class ItemsActivity extends BaseActivity {
 			if(position == 1){
 				cornerCenterTxt.setText("宝石");
 				lstCenterCorner.setVisibility(View.GONE);
+				setActivityParam("SessionHosekiList",CurrentSessionNo);
 				showActivity(WebBidActivity.class);
 			}
 		}

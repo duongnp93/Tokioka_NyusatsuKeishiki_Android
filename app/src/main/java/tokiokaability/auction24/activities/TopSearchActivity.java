@@ -312,6 +312,7 @@ public class TopSearchActivity extends BaseActivity {
             setActivityParam("SubCatList","");
             setActivityParam("BrandList","");
             setActivityParam("RankList","");
+            setActivityParam("SessionHosekiList","");
             setTransitAnimationType(TRANSIT_ANIMATION_FADEINOUT);
             if(v.getTag().toString().equals("5")){
                 showActivity(WebBidActivity.class);

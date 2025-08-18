@@ -330,7 +330,7 @@ public class ItemDetailActivity extends BaseActivity {
 
         validateButtons(false);
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) lsDetailInfor.getLayoutParams();
-        lp.height = (int) (getResources().getDimension(R.dimen._100sdp) * 8.5);
+        lp.height = (int) (getResources().getDimension(com.intuit.sdp.R.dimen._100sdp) * 8.5);
         lsDetailInfor.setLayoutParams(lp);
         lsDetailInfor.requestLayout();
 //        infoScroll.smoothScrollTo(0, 0);
@@ -764,7 +764,7 @@ public class ItemDetailActivity extends BaseActivity {
                 currentItem = (ItemInfo) returnData; // Get car information
                 getInquiryInfo(displayIndex);
                 RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) lsDetailInfor.getLayoutParams();
-                lp.height = (int) (getResources().getDimension(R.dimen._100sdp) * (currentItem.getCornerID().equals("5")?8.2:8.5));
+                lp.height = (int) (getResources().getDimension(com.intuit.sdp.R.dimen._100sdp) * (currentItem.getCornerID().equals("5")?8.2:8.5));
                 lsDetailInfor.setLayoutParams(lp);
                 lsDetailInfor.requestLayout();
                 lblSellNo2.setText(currentItem.getBoxNo() + "-" + currentItem.getBoxSubNo() + ":" + currentItem.getBrand());

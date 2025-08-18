@@ -147,27 +147,23 @@ public class ChaneAuthenticalActivity extends BaseActivity{
         }
     };
     public void checkInput(EditText editText){
-        switch (editText.getId()){
-            case R.id.txtCode1:
-                if(txtCode1.getText().length()>0){
-                    setFocusForEditText();
-                }
-                break;
-            case R.id.txtCode2:
-                if(txtCode2.getText().length()>0){
-                    setFocusForEditText();
-                }
-                break;
-            case R.id.txtCode3:
-                if(txtCode3.getText().length()>0){
-                    setFocusForEditText();
-                }
-                break;
-            case R.id.txtCode4:
-                if(txtCode4.getText().length()>0){
-                    setFocusForEditText();
-                }
-                break;
+        int id = editText.getId();
+        if (id == R.id.txtCode1) {
+            if (txtCode1.getText().length() > 0) {
+                setFocusForEditText();
+            }
+        } else if (id == R.id.txtCode2) {
+            if (txtCode2.getText().length() > 0) {
+                setFocusForEditText();
+            }
+        } else if (id == R.id.txtCode3) {
+            if (txtCode3.getText().length() > 0) {
+                setFocusForEditText();
+            }
+        } else if (id == R.id.txtCode4) {
+            if (txtCode4.getText().length() > 0) {
+                setFocusForEditText();
+            }
         }
         if(txtCode1.getText().length()>0 && txtCode2.getText().length() > 0 && txtCode3.getText().length() > 0 && txtCode4.getText().length() > 0){
             String authCode = txtCode1.getText().toString()+txtCode2.getText().toString()+txtCode3.getText().toString()+txtCode4.getText().toString();
