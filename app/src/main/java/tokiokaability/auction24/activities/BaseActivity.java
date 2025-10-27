@@ -33,6 +33,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
 
+import android.system.Os;
 import android.telephony.TelephonyManager;
 import android.view.*;
 import android.view.WindowManager.LayoutParams;
@@ -40,6 +41,10 @@ import android.view.View.*;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 import android.view.animation.*;
+
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public abstract class BaseActivity extends Activity {
 
@@ -372,7 +377,16 @@ public abstract class BaseActivity extends Activity {
 	public void onClosed() {
 
 	}
-
+	public void setStatusBar(){
+		if(android.os.Build.VERSION.SDK_INT > 14){
+			ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.statusBar), (v, insets) -> {
+				Insets statusBars = insets.getInsets(WindowInsetsCompat.Type.statusBars());
+				v.getLayoutParams().height = statusBars.top;
+				v.requestLayout();
+				return insets;
+			});
+		}
+	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

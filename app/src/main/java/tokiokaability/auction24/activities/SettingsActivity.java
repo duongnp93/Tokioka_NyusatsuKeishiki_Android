@@ -36,7 +36,7 @@ public class SettingsActivity extends BaseActivity {
 		protected void initialization(){
 			setContentView(R.layout.activity_settings);
 			super.initialization();
-			
+			setStatusBar();
 			SharedPreferences settings = getSharedPreferences(RealLuceAuctionApplication.SETTINGS, MODE_PRIVATE);
 	        
 //	        rdoMaxRowCountGroup = (SegmentedRadioGroup) findViewById(R.id.rdoMaxRowCountGroup);

@@ -128,6 +128,7 @@ public class ItemsActivity extends BaseActivity {
 	protected void initialization() {
 		setContentView(R.layout.activity_items);
 		super.initialization();
+		setStatusBar();
 		currentFunction = MENU_CURRENT_FUNCTION_LIST;
 		// Initial
 		settings = getSharedPreferences(RealLuceAuctionApplication.SETTINGS,

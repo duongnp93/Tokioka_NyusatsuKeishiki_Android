@@ -39,6 +39,7 @@ public class WebBidActivity  extends BaseActivity {
     protected void initialization() {
         setContentView(R.layout.web_auction);
         super.initialization();
+        setStatusBar();
         webView = findViewById(R.id.webViewArea);
         this.btnBack = findViewById(R.id.btnBack);
         lblScreenTitle = findViewById(R.id.lblScreenTitle);

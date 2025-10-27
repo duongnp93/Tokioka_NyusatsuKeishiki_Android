@@ -6,6 +6,7 @@
     android:background="#ffffff"
     android:noHistory="true"
     android:gravity="center"
+    android:fitsSystemWindows="true"
     android:id="@+id/blockHeader">
     <ImageView
         android:id="@+id/imgSplash"

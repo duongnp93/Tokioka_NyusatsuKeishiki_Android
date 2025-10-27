@@ -37,6 +37,7 @@ public class AgreementActivity  extends BaseActivity {
 	@Override
 	protected void initialization(){
 		setContentView(R.layout.activity_agreement);
+		setStatusBar();
 		showAgreeButton = (Boolean)getActivityParam("showAgreeButton",false);
 
 	    this.btnBack = (ImageButton) this.findViewById(R.id.btnBack);

@@ -40,7 +40,7 @@ public class AuctionStatusActivity extends BaseActivity{
 	protected void initialization(){
 		setContentView(R.layout.activity_auction_status);
         super.initialization();
-        
+		setStatusBar();
         
         btnUpdate = (ImageButton)findViewById(R.id.btnUpdate);
         btnUpdate.setOnClickListener(btnUpdateClick);

@@ -55,7 +55,7 @@ public class RegisterNegotiationActivity extends BaseActivity {
 	protected void initialization() {
 		setContentView(R.layout.activity_register_negotiation);
 		super.initialization();
-
+		setStatusBar();
 		// Get control.
 		blockJisha = (RelativeLayout) findViewById(R.id.blockJisha);
 		blockRaku = (RelativeLayout) findViewById(R.id.blockRaku);

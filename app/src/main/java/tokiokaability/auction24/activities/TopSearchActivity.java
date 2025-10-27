@@ -16,6 +16,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import androidx.core.app.ActivityCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import android.provider.Browser;
 import android.view.LayoutInflater;
@@ -111,8 +114,7 @@ public class TopSearchActivity extends BaseActivity {
         setContentView(R.layout.activity_top_search);
         super.initialization();
 
-
-
+        setStatusBar();
         blockPlace = (RelativeLayout) this.findViewById(R.id.blockPlace);
 
         blockSearch = (LinearLayout) this.findViewById(R.id.blockSearch);

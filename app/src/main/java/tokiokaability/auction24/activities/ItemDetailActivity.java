@@ -132,7 +132,7 @@ public class ItemDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_item_detail);
 
         super.initialization();
-
+        setStatusBar();
         place = RealLuceAuctionApplication.allPlaces.get(0);
 
         // Get search mode.

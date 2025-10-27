@@ -33,6 +33,7 @@ public class NyusatsuPushSettingActivity extends BaseActivity {
     protected void initialization() {
         setContentView(R.layout.activity_push_nyusatsu_setting);
         super.initialization();
+        setStatusBar();
         descripTxt = findViewById(R.id.descriptionTxt);
         mainLayout = findViewById(R.id.mainLayout);
         btnOK = findViewById(R.id.btnOK);

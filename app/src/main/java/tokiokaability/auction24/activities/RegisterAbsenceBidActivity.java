@@ -49,7 +49,7 @@ public class RegisterAbsenceBidActivity extends BaseActivity {
 	protected void initialization() {
 		setContentView(R.layout.activity_register_absence_bid);
 		super.initialization();
-
+		setStatusBar();
 		// Get control.
 		txtPrice = (EditText) findViewById(R.id.txtPrice);
 		btnRegister = (Button) findViewById(R.id.btnRegister);

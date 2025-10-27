@@ -82,7 +82,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 	protected void initialization(){
 		setContentView(R.layout.activity_search_boxno);
 		super.initialization();
-
+		setStatusBar();
 
 
 		backGround = (RelativeLayout) findViewById(R.id.mainLayout);

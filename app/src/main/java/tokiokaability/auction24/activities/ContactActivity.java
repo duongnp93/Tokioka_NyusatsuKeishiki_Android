@@ -69,7 +69,7 @@ public class ContactActivity extends BaseActivity {
 
         setContentView(R.layout.activity_contact);
         super.initialization();
-
+        setStatusBar();
         // Get control.
         m_mainLayout = (RelativeLayout)findViewById(R.id.contactLayout);
         m_inputMethodManager =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);

@@ -150,7 +150,7 @@ public class AuctionActivity extends BaseActivity implements
     protected void initialization() {
         setContentView(R.layout.activity_auction);
         super.initialization();
-
+        setStatusBar();
         btnMode = (ImageButton) findViewById(R.id.btnMode);
 
         btnSeriVoice = (ImageButton) findViewById(R.id.btnSeriVoice);

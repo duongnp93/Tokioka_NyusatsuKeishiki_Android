@@ -5,19 +5,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f2f2f2"
     android:orientation="vertical"
-    tools:context=".activities.ItemsActivity">
+    tools:context=".activities.ItemsActivity"
+    android:id="@+id/consumedView">
 
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/layout_main_menu"
         android:background="@null" />
-
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000" />
     <RelativeLayout
         android:id="@+id/blockHeader"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#024AA6" >
+        android:background="#024AA6"
+        android:layout_below="@id/statusBar">
 
         <Button
             android:id="@+id/btnLogoff"
@@ -252,6 +258,7 @@
                 android:background="@android:color/transparent"
                 android:padding="2.5dp"
                 android:tag="3"
+                android:visibility="gone"
                 />
             <ImageButton android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -262,6 +269,7 @@
                 android:background="@android:color/transparent"
                 android:padding="2.5dp"
                 android:tag="4"
+                android:visibility="gone"
                 />
             <ImageButton android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -317,7 +325,8 @@
                 android:gravity="center"
                 android:textColor="@android:color/black"
                 android:text="@string/top_bag"
-                android:textSize="10dp"/>
+                android:textSize="10dp"
+                android:visibility="gone"/>
             <TextView android:id="@+id/wlTxt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -325,7 +334,8 @@
                 android:gravity="center"
                 android:textColor="@android:color/black"
                 android:text="@string/top_wallet"
-                android:textSize="10dp"/>
+                android:textSize="10dp"
+                android:visibility="gone"/>
             <TextView android:id="@+id/jwTxt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

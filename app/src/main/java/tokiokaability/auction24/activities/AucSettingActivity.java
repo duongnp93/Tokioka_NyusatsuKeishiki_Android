@@ -22,6 +22,7 @@ public class AucSettingActivity extends BaseActivity {
     protected void initialization() {
         setContentView(R.layout.activity_auc_setting);
         super.initialization();
+        setStatusBar();
         descripTxt = findViewById(R.id.descriptionTxt);
         btnOK = findViewById(R.id.btnOK);
         btnDeny = findViewById(R.id.btnDeny);

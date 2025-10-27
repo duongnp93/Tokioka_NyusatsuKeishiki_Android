@@ -36,6 +36,7 @@ public class MyPageActivity extends BaseActivity {
     protected void initialization() {
         setContentView(R.layout.activity_mypage);
         super.initialization();
+        setStatusBar();
         descripTxt = findViewById(R.id.descriptionTxt);
         btnOK = findViewById(R.id.btnOK);
         btnDeny = findViewById(R.id.btnDeny);

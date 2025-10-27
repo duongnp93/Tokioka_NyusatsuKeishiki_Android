@@ -71,6 +71,7 @@
         <activity
             android:name="tokiokaability.auction24.activities.SearchBoxNoActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait"
             android:exported="false"
             tools:ignore="AppLinkUrlError">
@@ -207,6 +208,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             tools:ignore="AppLinkUrlError">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -5,8 +5,13 @@
     android:background="#f5f5f5"
     android:orientation="vertical"
     android:id="@+id/mainLayout">
-
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000" />
     <RelativeLayout
+        android:layout_below="@id/statusBar"
         android:id="@+id/blockHeader"
         android:layout_width="match_parent"
         android:layout_height="40dp"

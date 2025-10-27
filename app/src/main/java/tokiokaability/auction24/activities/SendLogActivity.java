@@ -25,6 +25,7 @@ public class SendLogActivity extends BaseActivity {
     protected void initialization() {
         setContentView(R.layout.activity_sendlog);
         super.initialization();
+        setStatusBar();
         lblScreenTitle = findViewById(R.id.lblScreenTitle);
         btnSendLog = (Button) findViewById(R.id.btnSendLog);
         btnSendLog.setOnClickListener(btnSendLogClick);
