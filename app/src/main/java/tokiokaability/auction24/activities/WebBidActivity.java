@@ -30,7 +30,7 @@ public class WebBidActivity  extends BaseActivity {
     String nyusatsu_url = "";
     TextView lblScreenTitle;
     int searchMode;
-    String boxNo,boxNoTo,freeWord,brandList,subCatList,rankList,sessionList,kakoFlg;
+    String boxNo,boxNoTo,freeWord,brandList,subCatList,rankList,sessionList,kakoFlg,cornerID;
     private ImageButton btnBack;
     public AssetManager am ;
     public Typeface yGR,yGB;
@@ -43,7 +43,7 @@ public class WebBidActivity  extends BaseActivity {
         webView = findViewById(R.id.webViewArea);
         this.btnBack = findViewById(R.id.btnBack);
         lblScreenTitle = findViewById(R.id.lblScreenTitle);
-        nyusatsu_url = RealLuceAuctionApplication.getConfiguration("NYUSATSU_URL");
+
         searchMode = (Integer) getActivityParam("SearchMode", 1);
         boxNo = (String) getActivityParam("BoxNo", "");
         boxNoTo = (String) getActivityParam("BoxNoTo", "");
@@ -53,6 +53,8 @@ public class WebBidActivity  extends BaseActivity {
         rankList = (String) getActivityParam("RankList","");
         sessionList = (String) getActivityParam("SessionHosekiList","");
         kakoFlg = (String) getActivityParam("KakoFlag","");
+        cornerID = (String) getActivityParam("CornerId","");
+        nyusatsu_url = cornerID.equals("5") || toInt(boxNo) > 500 ?RealLuceAuctionApplication.getConfiguration("NYUSATSU_URL"):RealLuceAuctionApplication.getConfiguration("NYUSATSU_TOKEI_URL");
         setScreenTitle();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
@@ -99,6 +101,14 @@ public class WebBidActivity  extends BaseActivity {
         }
     }
 
+    public static int toInt(String s) {
+        try {
+            return Integer.parseInt(s);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
     private void setScreenTitle() {
         am = getApplicationContext().getAssets();
         yGB = Typeface.createFromAsset(am,"fonts/YUGOTHB.TTC");
@@ -137,9 +147,10 @@ public class WebBidActivity  extends BaseActivity {
         String sList = TextUtils.join(",",kaisaiNoLst.subList(1,kaisaiNoLst.size()));
         String pList = sessionList.replace("'","");
         String sesParam = sList.equals(pList)?"":pList;
-        result = String.format("%s?phoneFlg=1&loginId=%s&searchMode=%d&cornerId=5&Brand=%s&MedCat=%s&Rank=%s&FreeWord=%s&FromBox=%s&ToBox=%s&KakoFlg=%s&SessionNo=%s"
+        result = String.format("%s?phoneFlg=1&loginId=%s&searchMode=%d&cornerId=%s&Brand=%s&MedCat=%s&Rank=%s&FreeWord=%s&FromBox=%s&ToBox=%s&KakoFlg=%s&SessionNo=%s"
                 ,nyusatsu_url,RealLuceAuctionApplication.loginID
                 ,searchMode
+                ,cornerID
                 ,brandList.replace("'","").replace("  "," ")
                 ,subCatList.replace("'","")
                 ,rankList.replace("'","")

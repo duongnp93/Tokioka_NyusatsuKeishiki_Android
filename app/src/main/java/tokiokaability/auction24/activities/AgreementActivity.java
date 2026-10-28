@@ -68,7 +68,7 @@ public class AgreementActivity  extends BaseActivity {
 		}
 		keiyakuArea.getSettings().setJavaScriptEnabled(true);
 		keiyakuArea.setWebViewClient(new WebViewClient());
-		keiyakuArea.loadUrl("http://18.180.66.204/tokioka/keiyaku.html");
+		keiyakuArea.loadUrl("http://18.180.66.204/tokioka_dev2/keiyaku.html");
 		douiBtn.setOnClickListener(douiBtnClick);
 
 //		if(RealLuceAuctionApplication.allPlaces.get(0).getRealFlag().equals("1")){

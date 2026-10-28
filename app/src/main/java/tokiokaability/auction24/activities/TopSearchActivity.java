@@ -251,7 +251,10 @@ public class TopSearchActivity extends BaseActivity {
                 setActivityParam("PlaceId",placeInfoList.get(placeIndex).getIdNo());
                 setActivityParam("OnePriceFlg",placeInfoList.get(placeIndex).getOnePriceFlg());
                 setActivityParam("KakoFlag","1");
-                showActivity(SearchBoxNoActivity.class);
+                setActivityParam("SessionList","");
+                setActivityParam("SessionHosekiList","");
+                setActivityParam("CornerId","1");
+                showActivity(WebBidActivity.class);
                 currentFunction = MENU_CURRENT_FUNCTION_ITEM_SEARCH;
                 resetMainMenuButtons();
             }
@@ -280,7 +283,7 @@ public class TopSearchActivity extends BaseActivity {
             setActivityParam("PlaceID",p.getIdNo());
             setActivityParam("ItemNo","");
             setActivityParam("Freeword","");
-            setActivityParam("CornerId","");
+            setActivityParam("CornerId","1");
             setActivityParam("BoxNo","");
             setActivityParam("BoxNoTo","");
             setActivityParam("SearchMode",SearchMode);
@@ -290,7 +293,8 @@ public class TopSearchActivity extends BaseActivity {
             setActivityParam("BrandList","");
             setActivityParam("RankList","");
             setTransitAnimationType(TRANSIT_ANIMATION_FADEINOUT);
-            showActivity(ItemsActivity.class);
+//            showActivity(ItemsActivity.class);
+            showActivity(WebBidActivity.class);
             currentFunction = MENU_CURRENT_FUNCTION_LIST;
             resetMainMenuButtons();
         }
@@ -316,14 +320,15 @@ public class TopSearchActivity extends BaseActivity {
             setActivityParam("RankList","");
             setActivityParam("SessionHosekiList","");
             setTransitAnimationType(TRANSIT_ANIMATION_FADEINOUT);
-            if(v.getTag().toString().equals("5")){
-                showActivity(WebBidActivity.class);
-            }
-            else{
-                currentFunction = MENU_CURRENT_FUNCTION_LIST;
-                showActivity(ItemsActivity.class);
-                resetMainMenuButtons();
-            }
+            showActivity(WebBidActivity.class);
+//            if(v.getTag().toString().equals("5")){
+//                showActivity(WebBidActivity.class);
+//            }
+//            else{
+//                currentFunction = MENU_CURRENT_FUNCTION_LIST;
+//                showActivity(ItemsActivity.class);
+//                resetMainMenuButtons();
+//            }
         }
     };
 

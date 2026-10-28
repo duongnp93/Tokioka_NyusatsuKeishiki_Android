@@ -56,8 +56,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
 
-import androidx.annotation.RequiresApi;
-import androidx.core.app.ActivityCompat;
+
 
 public class ItemsActivity extends BaseActivity {
 
@@ -391,12 +390,6 @@ public class ItemsActivity extends BaseActivity {
 					}
 				}
 			});
-			//final TelephonyManager tm = (TelephonyManager) getBaseContext().getSystemService(SplashActivity.TELEPHONY_SERVICE);
-			if (ActivityCompat.checkSelfPermission(getActivityContext(), Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
-				objService.login(RealLuceAuctionApplication.loginID, "", "02-00-00-00-00-00", "2", RealLuceAuctionApplication.publicIPAddress,"","1",
-						RealLuceAuctionApplication.countryCode);
-			}
-
 			checkLoginAndShowAuction();
 		}
 	};
@@ -1304,8 +1297,6 @@ public class ItemsActivity extends BaseActivity {
 		public long getItemId(int position) {
 			return 0;
 		}
-
-		@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 		@Override
 		public View getView(final int position, View convertView, final ViewGroup parent){
 

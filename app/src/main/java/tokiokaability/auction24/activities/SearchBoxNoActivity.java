@@ -74,6 +74,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 	ScrollView kensakuScroll;
 	boolean hakoSearch = false;
 	String lang = "ja";
+	String cornerId = "1";
 	//************************ SCREEN LIFECYCLE ******************
 	/*
 	 * Initialization
@@ -229,6 +230,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				catTxt.setText(catAdapter.getLstCat().get(position));
+				cornerId = String.valueOf(position +1);
 				catLst.setVisibility(GONE);
 				catArrow.setImageResource(R.drawable.arr_down);
 				getSearchInfo("'"+catTxt.getText().toString()+"'","","",false,true,true);
@@ -901,6 +903,7 @@ public class SearchBoxNoActivity extends BaseActivity {
 			hakoToTxt.setText("");
 			kaisaiTxt2.setText("");
 			setKaisaiList2();
+			setActivityParam("CornerId",cornerId);
 		}
 		else{
 			if(kakoFlag.equals("1") && !checkInputHako())
@@ -912,6 +915,12 @@ public class SearchBoxNoActivity extends BaseActivity {
 			setActivityParam("RankList","");
 			setActivityParam("BoxNo",hakoTxt.getText().toString());
 			setActivityParam("BoxNoTo",hakoToTxt.getText().toString());
+			if(!hakoTxt.getText().toString().isEmpty() && Integer.parseInt(hakoTxt.getText().toString()) > 500){
+				setActivityParam("CornerId","5");
+			}
+			else{
+				setActivityParam("CornerId","1");
+			}
 			setActivityParam("SessionList",getSessionNo2());
 			setActivityParam("SessionHosekiList",getSessionNo2());
 			setKaisaiList();
@@ -919,18 +928,19 @@ public class SearchBoxNoActivity extends BaseActivity {
 			freeTxt.setText("");
 			getSearchInfo("","","",true,true,true);
 		}
-		setActivityParam("CornerId","");
+
 		setActivityParam("Type","");
 
 		setActivityParam("KakoFlag",kakoFlag);
 		setTransitAnimationType(TRANSIT_ANIMATION_FADEINOUT);
 
-		if(catSend.equals("'宝石'") || (hakoTxt.getText().length() > 0 && Integer.valueOf(hakoTxt.getText().toString()) >= 500)){
-			showActivity(WebBidActivity.class);
-		}
-		else{
-			showActivity(ItemsActivity.class);
-		}
+//		if(catSend.equals("'宝石'") || (hakoTxt.getText().length() > 0 && Integer.valueOf(hakoTxt.getText().toString()) >= 500)){
+//			showActivity(WebBidActivity.class);
+//		}
+//		else{
+//			showActivity(ItemsActivity.class);
+//		}
+		showActivity(WebBidActivity.class);
 
 	}
 
